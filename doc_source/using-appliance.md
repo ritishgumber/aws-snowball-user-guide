@@ -17,18 +17,15 @@ If you notice anything that looks suspicious about the Snowball, don't connect i
 
 The following is what the Snowball looks like\.
 
-![\[The Snowball is a device that weighs less than 50 pounds and is used to transfer
-        data.\]](http://docs.aws.amazon.com/snowball/latest/ug/images/Snowball-closed-600w.png)
+![\[The Snowball is a device that weighs less than 50 pounds and is used to transfer data.\]](http://docs.aws.amazon.com/snowball/latest/ug/images/Snowball-closed-600w.png)
 
 It has two panels, a front and a back, which are opened by latches and flipped up to rest on the top of the Snowball\.
 
-![\[The Snowball is a device that weighs less than 50 pounds and is used to transfer
-        data.\]](http://docs.aws.amazon.com/snowball/latest/ug/images/Snowball-opening-600w.png)
+![\[The Snowball is a device that weighs less than 50 pounds and is used to transfer data.\]](http://docs.aws.amazon.com/snowball/latest/ug/images/Snowball-opening-600w.png)
 
 Open the front panel first, flip it on top of the Snowball, and then open the back panel second, flipping it up to rest on the first\.
 
-![\[The Snowball is a device that weighs less than 50 pounds and is used to transfer
-        data.\]](http://docs.aws.amazon.com/snowball/latest/ug/images/Snowball-opened-600w.png)
+![\[The Snowball is a device that weighs less than 50 pounds and is used to transfer data.\]](http://docs.aws.amazon.com/snowball/latest/ug/images/Snowball-opened-600w.png)
 
 Doing this gives you access to the touch screen on the E Ink display embedded in the front side of the Snowball, and the power and network ports in the back\.
 

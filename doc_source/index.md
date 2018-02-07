@@ -54,7 +54,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Using the Amazon S3 Adapter for Snowball](using-adapter.md)
          + [Options for the Amazon S3 Adapter for Snowball](using-adapter-options.md)
          + [Using the Adapter with Amazon S3 Commands for the AWS CLI](using-adapter-cli.md)
-         + [Supported REST API Actions for Amazon S3](using-adapter-s3api.md)
+         + [Supported REST API Actions](using-adapter-supported-api.md)
 + [Shipping Considerations for AWS Snowball](shipping.md)
    + [Shipping an AWS Snowball Appliance](mailing-storage.md)
 + [Security in AWS Snowball](security.md)

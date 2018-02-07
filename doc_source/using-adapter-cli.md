@@ -31,7 +31,7 @@ Following, you can find a description of the subset of AWS CLI commands and opti
 
   + `--quiet` \(boolean\) Operations performed by the specified command are not displayed\.
 
-  + `--include` \(string\) Don't exclude files or objects in the command that match the specified pattern\. See [Use of Exclude and Include Filters](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html#use-of-exclude-and-include-filters) in the *AWS Command Line Interface Reference* for details\.
+  + `--include` \(string\) Don't exclude files or objects in the command that match the specified pattern\. See [Use of Exclude and Include Filters](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html#use-of-exclude-and-include-filters) in the *AWS CLI Command Reference* for details\.
 
   + `--exclude` \(string\) Exclude all files or objects from the command that matches the specified pattern\.
 
@@ -43,7 +43,7 @@ Following, you can find a description of the subset of AWS CLI commands and opti
 
   + `--storage-class` \(string\) The type of storage to use for the object\. Valid choices are: `STANDARD` | `REDUCED_REDUNDANCY` | `STANDARD_IA`\. Defaults to `STANDARD`\.
 
-  + `--metadata` \(map\) A map of metadata to store with the objects in Amazon S3\. This will be applied to every object that is part of this request\. In a sync, this functionality means that files that haven't changed won't receive the new metadata\. When copying between two Amazon S3 locations, the metadata\-directive argument defaults to `REPLACE` unless otherwise specified\.
+  + `--metadata` \(map\) A map of metadata to store with the objects in Amazon S3\. This map is applied to every object that is part of this request\. In a sync, this functionality means that files that aren't changed don't receive the new metadata\. When copying between two Amazon S3 locations, the metadata\-directive argument defaults to `REPLACE` unless otherwise specified\.
 **Important**  
 Syncing from one directory on a Snowball to another directory on the same Snowball is not supported\. Syncing from one Snowball to another Snowball is not supported\.
 
@@ -57,7 +57,7 @@ Syncing from one directory on a Snowball to another directory on the same Snowba
 
   + `--dryrun` \(boolean\) The operations that would be performed using the specified command are displayed without being run\.
 
-  + `--include` \(string\) Don't exclude files or objects in the command that match the specified pattern\. See [Use of Exclude and Include Filters](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html#use-of-exclude-and-include-filters) in the *AWS Command Line Interface Reference* for details\.
+  + `--include` \(string\) Don't exclude files or objects in the command that match the specified pattern\. For details, see [Use of Exclude and Include Filters](http://docs.aws.amazon.com/cli/latest/reference/s3/index.html#use-of-exclude-and-include-filters) in the *AWS CLI Command Reference*\.
 
   + `--exclude` \(string\) Exclude all files or objects from the command that matches the specified pattern\.
 

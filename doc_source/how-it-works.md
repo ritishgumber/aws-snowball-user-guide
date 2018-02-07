@@ -45,8 +45,6 @@ The following are overviews of how the Snowball is implemented for importing and
 
 1. **A Snowball is prepared for your job** – We prepare a Snowball for your job, and the status of your job is now **Preparing Snowball**\. For security purposes, data transfers must be completed within 90 days of the Snowball being prepared\.
 
-1. 
-
 1. **A Snowball is shipped to you by your region's carrier** – The carrier takes over from here, and the status of your job is now **In transit to you**\. You can find your tracking number and a link to the tracking website on the AWS Snowball Management Console\. For information on who your region's carrier is, see [Shipping Carriers](mailing-storage.md#carriers)\.
 
 1. **Receive the Snowball** – A few days later, your region's carrier delivers the Snowball to the address that you provided when you created the job, and the status of your job changes to **Delivered to you**\. When the Snowball arrives, you’ll notice that it didn’t arrive in a box, because the Snowball is its own shipping container\.

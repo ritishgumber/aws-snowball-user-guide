@@ -21,7 +21,7 @@ For more information, see [Class S3ClientOptions\.Builder](http://docs.aws.amazo
 + [Getting the Status of a Snowball Using the Adapter](#get-status-using-adapter)
 + [Options for the Amazon S3 Adapter for Snowball](using-adapter-options.md)
 + [Using the Adapter with Amazon S3 Commands for the AWS CLI](using-adapter-cli.md)
-+ [Supported REST API Actions for Amazon S3](using-adapter-s3api.md)
++ [Supported REST API Actions](using-adapter-supported-api.md)
 
 ## Starting the Amazon S3 Adapter for Snowball<a name="start-adapter"></a>
 
