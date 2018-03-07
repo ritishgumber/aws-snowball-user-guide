@@ -36,7 +36,7 @@ Snowball with the Snowball appliance has the following features:
 + For a list of regions where the Snowball appliance is available, see [AWS Snowball](http://docs.aws.amazon.com/general/latest/gr/rande.html#snowball_region) in the * AWS General Reference*\.
 
 **Note**  
-Snowball doesn't support international shipping or shipping between regions outside of the US\. For more information on shipping restrictions, see [Region\-Based Shipping Restrictions](mailing-storage.md#shipwithinregion)\.
+Snowball doesn't support international shipping or shipping between regions outside of the US\. For more information on shipping restrictions, see [Region\-Based Shipping Restrictions](shipping.md#shipwithinregion)\.
 
 ## Prerequisites for Using AWS Snowball<a name="snowball-prereqs"></a>
 

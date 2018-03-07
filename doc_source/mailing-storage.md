@@ -21,9 +21,9 @@ When you create a job, you provide the address that you want the Snowball shippe
 
 + For all other regions, [UPS](https://www.ups.com/) is the carrier\.
 
-### AWS Snowball Pickups in the EU and US, and Canada<a name="standard-pickup"></a>
+### AWS Snowball Pickups in the EU, US, Canada, Singapore, and Malaysia<a name="standard-pickup"></a>
 
-In the EU and US and Canadian regions, keep the following information in mind for UPS to pick up a Snowball:
+In the EU, US, Canada, Singapore, and Malaysia, keep the following information in mind for UPS to pick up a Snowball:
 
 + You arrange for UPS to pick up the Snowball by scheduling a pickup with UPS directly, or take the Snowball to a UPS package drop\-off facility to be shipped to AWS\. To schedule a pickup with UPS, you need a UPS account\.
 
@@ -116,25 +116,6 @@ In Japan, Schenker\-Seino handles your pickups\. When you are ready to return yo
 
 + The Snowball is delivered to an AWS sorting facility and forwarded to the AWS data center\. Schenker\-Seino automatically reports back a tracking number for your job\.
 
-### Region\-Based Shipping Restrictions<a name="shipwithinregion"></a>
-
-Before you create a job, you should sign in to the console from the AWS Region that your Amazon S3 data is housed in\. A few shipping restrictions apply, as follows:
-
-+ For data transfers in US regions, we don't ship Snowballs outside of the United States\.
-
-+ We don't ship Snowballs between non\-US regions—for example, from EU \(Ireland\) to EU \(Frankfurt\), or from Asia Pacific \(Mumbai\) to Asia Pacific \(Sydney\)\.
-
-+ For data transfers in Asia Pacific \(Sydney\), we only ship Snowballs within Australia\.
-
-+ For data transfers in Asia Pacific \(Mumbai\), we only ship Snowballs within India\.
-
-+ For data transfers in Japan, we only ship Snowballs within Japan\.
-
-+ For data transfers in the EU regions, we only ship Snowballs to EU member countries listed following: Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, and the UK\.
-
-**Note**  
-AWS doesn't ship Snowballs to post office boxes\.
-
 ### Shipping Speeds<a name="shippingspeeds"></a>
 
 Each country has different shipping speeds available\. These shipping speeds are based on the country in which you're shipping a Snowball\. Shipping speeds are as follows:
@@ -145,8 +126,12 @@ Each country has different shipping speeds available\. These shipping speeds are
 
 + **European Union \(EU\)** – When shipping to any of the countries within the EU, you have access to express shipping\. Typically, Snowballs shipped express are delivered in about a day\. In addition, most countries in the EU have access to standard shipping, which typically takes less than a week, one way\.
 
-+ **India** – When shipping within India, Snowballs arrive in one to seven days\.
++ **India** – When shipping within India, Snowballs are sent out within 7 working days of AWS receiving all related tax documents\.
 
 + **Japan** – When shipping within Japan, you have access to the standard shipping speed\.
 
 + **United States of America \(US\) and Canada** – When shipping within the US or Canada, you have access to one\-day shipping and two\-day shipping\.
+
++ **Singapore** – When shipping within Singapore, you have access to Domestic Express Saver shipping\.
+
++ **Malaysia** – When shipping from Malaysia to Singapore, you have access to UPS Express Saver shipping\.

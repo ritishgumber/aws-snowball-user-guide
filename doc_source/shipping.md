@@ -10,6 +10,7 @@ Following, you can find information about how shipping is handled for AWS Snowba
 
 
 + [Preparing a Snowball for Shipping](#appliance-shipping)
++ [Region\-Based Shipping Restrictions](#shipwithinregion)
 + [Shipping an AWS Snowball Appliance](mailing-storage.md)
 
 **Note**  
@@ -32,3 +33,24 @@ If you've powered off and unplugged the Snowball, and your shipping label doesn'
 1. Close the two panels on the back and front of the Snowball, pressing in until you hear and feel them click\.
 
 You don't need to pack the Snowball in a container, because it is its own physically rugged shipping container\. The E Ink display on the front of the Snowball changes to your return shipping label when the Snowball is turned off\.
+
+## Region\-Based Shipping Restrictions<a name="shipwithinregion"></a>
+
+Before you create a job, you should sign in to the console from the AWS Region that your Amazon S3 data is housed in\. A few shipping restrictions apply, as follows:
+
++ For data transfers in US regions, we don't ship Snowballs outside of the United States\.
+
++ We don't ship Snowballs between non\-US regions—for example, from EU \(Ireland\) to EU \(Frankfurt\), or from Asia Pacific \(Mumbai\) to Asia Pacific \(Sydney\)\.
+
++ For data transfers in Asia Pacific \(Sydney\), we only ship Snowballs within Australia\.
+
++ For data transfers in Asia Pacific \(Mumbai\), we only ship Snowballs within India\.
+
++ For data transfers in Japan, we only ship Snowballs within Japan\.
+
++ For data transfers in the EU regions, we only ship Snowballs to EU member countries listed following: Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, and the UK\.
+
++ For data transfers in the Asia Pacific \(Singapore\) region, we only ship Snowballs to Singapore and Malaysia\.
+
+**Note**  
+AWS doesn't ship Snowballs to post office boxes\.

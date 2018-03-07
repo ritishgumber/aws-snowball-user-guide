@@ -15,7 +15,7 @@ A method that enables a client to see if a server can accept a request before ac
 See [additional authenticated data](#additional_authenticated_data).
 
 **access control list \(ACL\)**<a name="ACL"></a>  
-A document that defines who can access a particular [bucket](#bucket) or object\. Each [bucket](#bucket) and object in Amazon S3 has an ACL\. The document defines what each type of user can do, such as write and read permissions\.
+A document that defines who can access a particular [bucket](#bucket) or object\. Each [bucket](#bucket) and object in [Amazon S3](#AmazonSimpleStorageService) has an ACL\. The document defines what each type of user can do, such as write and read permissions\.
 
 **access identifiers**   
 See [credentials](#accesscredentials).
@@ -30,7 +30,7 @@ A unique identifier that's associated with a [secret access key](#SecretAccessKe
 A method to increase security by changing the AWS access key ID\. This method enables you to retire an old key at your discretion\.
 
 **access policy language**<a name="accesslang"></a>  
-A language for writing documents \(that is, *policies*\) that specify who can access a particular AWS [resource](#resource) and under what conditions\.
+A language for writing documents \(that is, [*policies*](#policy)\) that specify who can access a particular AWS [resource](#resource) and under what conditions\.
 
 **account**<a name="account"></a>  
 A formal relationship with AWS that is associated with \(1\) the owner email address and password, \(2\) the control of [resource](#resource)s created under its umbrella, and \(3\) payment for the AWS activity related to those resources\. The AWS account has permission to do anything and everything with all the AWS account resources\. This is in contrast to a [user](#AWSUser), which is an entity contained within the account\.
@@ -45,11 +45,11 @@ See [access control list \(ACL\)](#ACL).
 See [AWS Certificate Manager \(ACM\)](#acm).
 
 **action**<a name="action"></a>  
-An API function\. Also called *operation* or *call*\. The activity the [principal](#principal) has permission to perform\. The action is B in the statement "A has permission to do B to C where D applies\." For example, Jane sends a request to Amazon SQS with Action=ReceiveMessage\.   
-[Amazon CloudWatch](#AmazonCW): The response initiated by the change in an alarm's state: for example, from OK to ALARM\. The state change may be triggered by a metric reaching the alarm threshold, or by a SetAlarmState request\. Each alarm can have one or more actions assigned to each state\. Actions are performed once each time the alarm changes to a state that has an action assigned, such as an Amazon Simple Notification Service notification, an [Auto Scaling](#AutoScaling) [policy](#policy) execution or an Amazon EC2 [instance](#instance) stop/terminate action\.
+An API function\. Also called *operation* or *call*\. The activity the [principal](#principal) has permission to perform\. The action is B in the statement "A has permission to do B to C where D applies\." For example, Jane sends a request to [Amazon SQS](#AmazonSimpleQueueService) with Action=ReceiveMessage\.   
+[Amazon CloudWatch](#AmazonCW): The response initiated by the change in an alarm's state: for example, from OK to ALARM\. The state change may be triggered by a metric reaching the alarm threshold, or by a SetAlarmState request\. Each alarm can have one or more actions assigned to each state\. Actions are performed once each time the alarm changes to a state that has an action assigned, such as an [Amazon Simple Notification Service](#SNS) notification, an [Auto Scaling](#AutoScaling) [policy](#policy) execution or an [Amazon EC2](#ec2) [instance](#instance) stop/terminate action\.
 
 **active trusted signers**<a name="trustedsigner"></a>  
-A list showing each of the trusted signers you've specified and the IDs of the corresponding active key pairs that Amazon CloudFront is aware of\. To be able to create working signed URLs, a trusted signer must appear in this list with at least one key pair ID\.
+A list showing each of the trusted signers you've specified and the IDs of the corresponding active key pairs that [Amazon CloudFront](#AmazonCF) is aware of\. To be able to create working signed URLs, a trusted signer must appear in this list with at least one key pair ID\.
 
 **additional authenticated data**<a name="additional_authenticated_data"></a>  
 Information that is checked for integrity but not encrypted, such as headers or other contextual metadata\.
@@ -58,10 +58,10 @@ Information that is checked for integrity but not encrypted, such as headers or 
 [Auto Scaling](#AutoScaling) might suspend processes for [Auto Scaling group](#AutoScalingGroup) that repeatedly fail to launch instances\. Auto Scaling groups that most commonly experience administrative suspension have zero running instances, have been trying to launch instances for more than 24 hours, and have not succeeded in that time\. 
 
 **alarm**<a name="alarm"></a>  
-An item that watches a single metric over a specified time period, and triggers an Amazon SNS [topic](#topic) or an [Auto Scaling](#AutoScaling) [policy](#policy) if the value of the metric crosses a threshold value over a predetermined number of time periods\.
+An item that watches a single metric over a specified time period, and triggers an [Amazon SNS](#SNS) [topic](#topic) or an [Auto Scaling](#AutoScaling) [policy](#policy) if the value of the metric crosses a threshold value over a predetermined number of time periods\.
 
 **allow**<a name="allow"></a>  
-One of two possible outcomes \(the other is [deny](#deny)\) when an IAM access [policy](#policy) is evaluated\. When a user makes a request to AWS, AWS evaluates the request based on all permissions that apply to the user and then returns either allow or deny\.
+One of two possible outcomes \(the other is [deny](#deny)\) when an [IAM](#IAM) access [policy](#policy) is evaluated\. When a user makes a request to AWS, AWS evaluates the request based on all permissions that apply to the user and then returns either allow or deny\.
 
 **Amazon API Gateway**<a name="APIGateway"></a>  
 A fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale\.   
@@ -87,7 +87,7 @@ A web service that enables you to monitor and manage various metrics, and config
 See also [https://aws\.amazon\.com/cloudwatch](https://aws.amazon.com/cloudwatch/).
 
 **Amazon CloudWatch Events**<a name="AmazonCWE"></a>  
-A web service that enables you to deliver a timely stream of system events that describe changes in AWS [resource](#resource)s to [AWS Lambda](#lambda) functions, streams in [Amazon Kinesis Data Streams](#AmazonKinesisStreams), Amazon Simple Notification Service topics, or built\-in targets\.    
+A web service that enables you to deliver a timely stream of system events that describe changes in AWS [resource](#resource)s to [AWS Lambda](#lambda) functions, streams in [Amazon Kinesis Data Streams](#AmazonKinesisStreams), [Amazon Simple Notification Service](#SNS) topics, or built\-in targets\.    
 See also [https://aws\.amazon\.com/cloudwatch](https://aws.amazon.com/cloudwatch/).
 
 **Amazon CloudWatch Logs**<a name="AmazonCWL"></a>  
@@ -115,7 +115,7 @@ A service that provides block level storage [volume](#volume)s for use with [EC2
 See also [https://aws\.amazon\.com/ebs](https://aws.amazon.com/ebs/).
 
 **Amazon EBS\-backed AMI**<a name="EBSbacked"></a>  
-A type of [Amazon Machine Image \(AMI\)](#AmazonMachineImage) whose [instance](#instance)s use an Amazon EBS [volume](#volume) as their root device\. Compare this with instances launched from [instance store\-backed AMI](#instancebacked)s, which use the [instance store](#instancestore) as the root device\.
+A type of [Amazon Machine Image \(AMI\)](#AmazonMachineImage) whose [instance](#instance)s use an [Amazon EBS](#EBS) [volume](#volume) as their root device\. Compare this with instances launched from [instance store\-backed AMI](#instancebacked)s, which use the [instance store](#instancestore) as the root device\.
 
 **Amazon Elastic Container Registry \(Amazon ECR\)**<a name="ecr"></a>  
 A fully managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images\. Amazon ECR is integrated with [Amazon Elastic Container Service \(Amazon ECS\)](#ecs) and [AWS Identity and Access Management \(IAM\)](#IAM)\.   
@@ -136,7 +136,7 @@ A web service that enables you to launch and manage Linux/UNIX and Windows serve
 See also [https://aws\.amazon\.com/ec2](https://aws.amazon.com/ec2/).
 
 **Amazon Elastic File System \(Amazon EFS\)**<a name="efs"></a>  
-A file storage service for EC2 [instance](#instance)s\. Amazon EFS is easy to use and provides a simple interface with which you can create and configure file systems\. Amazon EFS storage capacity grows and shrinks automatically as you add and remove files\.   
+A file storage service for [EC2](#ec2) [instance](#instance)s\. Amazon EFS is easy to use and provides a simple interface with which you can create and configure file systems\. Amazon EFS storage capacity grows and shrinks automatically as you add and remove files\.   
 See also [https://aws\.amazon\.com/efs/](https://aws.amazon.com/efs/).
 
 **Amazon EMR \(Amazon EMR\)**<a name="AmazonElasticMapReduce"></a>  
@@ -176,7 +176,7 @@ A platform for streaming data on AWS\. Kinesis offers services that simplify the
 See also [https://aws\.amazon\.com/kinesis/](https://aws.amazon.com/kinesis/).
 
 **Amazon Kinesis Data Firehose**<a name="AmazonKinesisFirehose"></a>  
-A fully managed service for loading streaming data into AWS\. Kinesis Data Firehose can capture and automatically load streaming data into Amazon S3 and [Amazon Redshift ](#redshift), enabling near real\-time analytics with existing business intelligence tools and dashboards\. Kinesis Data Firehose automatically scales to match the throughput of your data and requires no ongoing administration\. It can also batch, compress, and encrypt the data before loading it\.    
+A fully managed service for loading streaming data into AWS\. Kinesis Data Firehose can capture and automatically load streaming data into [Amazon S3](#AmazonSimpleStorageService) and [Amazon Redshift ](#redshift), enabling near real\-time analytics with existing business intelligence tools and dashboards\. Kinesis Data Firehose automatically scales to match the throughput of your data and requires no ongoing administration\. It can also batch, compress, and encrypt the data before loading it\.    
 See also [https://aws\.amazon\.com/kinesis/firehose/](https://aws.amazon.com/kinesis/firehose/).
 
 **Amazon Kinesis Data Streams**<a name="AmazonKinesisStreams"></a>  
@@ -192,7 +192,7 @@ A cross\-platform, 3D game engine for creating high\-quality games\. You can con
 See also [https://aws\.amazon\.com/lumberyard/](https://aws.amazon.com/lumberyard/).
 
 **Amazon Machine Image \(AMI\)**<a name="AmazonMachineImage"></a>  
-An encrypted machine image stored in [Amazon Elastic Block Store \(Amazon EBS\)](#EBS) or Amazon Simple Storage Service\. AMIs are like a template of a computer's root drive\. They contain the operating system and can also include software and layers of your application, such as database servers, middleware, web servers, and so on\. 
+An encrypted machine image stored in [Amazon Elastic Block Store \(Amazon EBS\)](#EBS) or [Amazon Simple Storage Service](#AmazonSimpleStorageService)\. AMIs are like a template of a computer's root drive\. They contain the operating system and can also include software and layers of your application, such as database servers, middleware, web servers, and so on\. 
 
 **Amazon Machine Learning**<a name="machine-learning"></a>  
 A cloud\-based service that creates machine learning \(ML\) models by finding patterns in your data, and uses these models to process new data and generate predictions\.   
@@ -302,13 +302,13 @@ See [Amazon Machine Image \(AMI\)](#AmazonMachineImage).
 The location where your customers manage the Amazon DevPay products they've purchased\. The web address is [http://www\.amazon\.com/dp\-applications](http://www.amazon.com/dp-applications)\.
 
 **application revision**<a name="applicationrevision"></a>  
-[AWS CodeDeploy](#AWSCodeDeploy): An archive file containing source content—such as source code, web pages, executable files, and deployment scripts—along with an [application specification file](#applicationspecificationfile)\. Revisions are stored in Amazon S3 [bucket](#bucket)s or [GitHub](#github) repositories\. For Amazon S3, a revision is uniquely identified by its Amazon S3 object key and its ETag, version, or both\. For GitHub, a revision is uniquely identified by its commit ID\.
+[AWS CodeDeploy](#AWSCodeDeploy): An archive file containing source content—such as source code, web pages, executable files, and deployment scripts—along with an [application specification file](#applicationspecificationfile)\. Revisions are stored in [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket)s or [GitHub](#github) repositories\. For Amazon S3, a revision is uniquely identified by its Amazon S3 object key and its ETag, version, or both\. For GitHub, a revision is uniquely identified by its commit ID\.
 
 **application specification file**<a name="applicationspecificationfile"></a>  
 [AWS CodeDeploy](#AWSCodeDeploy): A YAML\-formatted file used to map the source files in an application revision to destinations on the instance; specify custom permissions for deployed files; and specify scripts to be run on each instance at various stages of the deployment process\.
 
 **application version**<a name="appversion"></a>  
-[AWS Elastic Beanstalk](#Beanstalk): A specific, labeled iteration of an application that represents a functionally consistent set of deployable application code\. A version points to an Amazon S3 object \(a JAVA WAR file\) that contains the application code\. 
+[AWS Elastic Beanstalk](#Beanstalk): A specific, labeled iteration of an application that represents a functionally consistent set of deployable application code\. A version points to an [Amazon S3](#AmazonSimpleStorageService) object \(a JAVA WAR file\) that contains the application code\. 
 
 **AppSpec file**   
 See [application specification file](#applicationspecificationfile).
@@ -323,7 +323,7 @@ See [Amazon Resource Name \(ARN\)](#ARN).
 [AWS CodePipeline](#AWSCodePipeline): A copy of the files or changes that will be worked upon by the pipeline\. 
 
 **asymmetric encryption**<a name="asymmetric_encryption"></a>  
- Encryption that uses both a public key and a private key\.
+ [Encryption](#encrypt) that uses both a public key and a private key\.
 
 **asynchronous bounce**<a name="asynchronousbounce"></a>  
 A type of [bounce](#bounce) that occurs when a [receiver](#receiver) initially accepts an email message for delivery and then subsequently fails to deliver it\.
@@ -339,13 +339,13 @@ A fundamental data element, something that does not need to be broken down any f
 See [Amazon Aurora](#aurora).
 
 **authenticated encryption**<a name="authenticated_encryption"></a>  
-Encryption that provides confidentiality, data integrity, and authenticity assurances of the encrypted data\.
+[Encryption](#encrypt) that provides confidentiality, data integrity, and authenticity assurances of the encrypted data\.
 
 **authentication**<a name="authentication"></a>  
 The process of proving your identity to a system\.
 
 **Auto Scaling**<a name="AutoScaling"></a>  
-A web service designed to launch or terminate [instance](#instance)s automatically based on user\-defined policies, schedules, and [health check](#healthcheck)s\.   
+A web service designed to launch or terminate [instance](#instance)s automatically based on user\-defined [policies](#policy), schedules, and [health check](#healthcheck)s\.   
 See also [https://aws\.amazon\.com//autoscaling](https://aws.amazon.com//autoscaling/).
 
 **Auto Scaling group**<a name="AutoScalingGroup"></a>  
@@ -366,7 +366,7 @@ The AWS cloud computing model in which you pay for services on demand and use as
 See also [https://aws\.amazon\.com/billing/new\-user\-faqs/](https://aws.amazon.com/billing/new-user-faqs/).
 
 **AWS Certificate Manager \(ACM\)**<a name="acm"></a>  
-A web service for provisioning, managing, and deploying Secure Sockets Layer/Transport Layer Security \(SSL/TLS\) certificates for use with AWS services\.   
+A web service for provisioning, managing, and deploying Secure Sockets Layer/[Transport Layer Security](#transportlayersecurity) \(SSL/TLS\) certificates for use with AWS services\.   
 See also [https://aws\.amazon\.com/certificate\-manager/](https://aws.amazon.com/certificate-manager/).
 
 **AWS Cloud9**<a name="AWSCloud9"></a>  
@@ -473,7 +473,7 @@ A managed cloud platform that lets connected devices easily and securely interac
 See also [https://aws\.amazon\.com/iot](https://aws.amazon.com/iot/).
 
 **AWS Key Management Service \(AWS KMS\)**<a name="AWS_KMS"></a>  
-A managed service that simplifies the creation and control of encryption keys that are used to encrypt data\.   
+A managed service that simplifies the creation and control of [encryption](#encrypt) keys that are used to encrypt data\.   
 See also [ https://aws\.amazon\.com/kms](https://aws.amazon.com/kms/).
 
 **AWS Lambda**<a name="lambda"></a>  
@@ -484,14 +484,14 @@ See also [https://aws\.amazon\.com/lambda/](https://aws.amazon.com/lambda/).
 One of two types of [customer master key \(CMK\)](#customer_master_key)s in [AWS Key Management Service \(AWS KMS\)](#AWS_KMS)\. 
 
 **AWS managed policy**<a name="AWS_managed_policy"></a>  
-An IAM [managed policy](#managed_policy) that is created and managed by AWS\.
+An [IAM](#IAM) [managed policy](#managed_policy) that is created and managed by AWS\.
 
 **AWS Management Console**<a name="AWSManagementConsole"></a>  
 A graphical interface to manage compute, storage, and other cloud [resource](#resource)s\.   
 See also [https://aws\.amazon\.com/console](https://aws.amazon.com/console/).
 
 **AWS Management Portal for vCenter**<a name="mgtportal"></a>  
-A web service for managing your AWS [resource](#resource)s using VMware vCenter\. You install the portal as a vCenter plug\-in within your existing vCenter environment\. Once installed, you can migrate VMware VMs to Amazon EC2 and manage AWS resources from within vCenter\.   
+A web service for managing your AWS [resource](#resource)s using VMware vCenter\. You install the portal as a vCenter plug\-in within your existing vCenter environment\. Once installed, you can migrate VMware VMs to [Amazon EC2](#ec2) and manage AWS resources from within vCenter\.   
 See also [https://aws\.amazon\.com/ec2/vcenter\-portal/](https://aws.amazon.com/ec2/vcenter-portal/).
 
 **AWS Marketplace**<a name="marketplace"></a>  
@@ -515,7 +515,7 @@ An account management service that enables you to consolidate multiple AWS accou
 See also [https://aws\.amazon\.com/organizations/](https://aws.amazon.com/organizations/).
 
 **AWS SDK for C\+\+**<a name="sdkcpp"></a>  
-A software development kit for that provides C\+\+ APIs for many AWS services including Amazon S3, Amazon EC2, [Amazon DynamoDB](#dynamodb), and more\. The single, downloadable package includes the AWS C\+\+ library, code samples, and documentation\.   
+A software development kit for that provides C\+\+ APIs for many AWS services including [Amazon S3](#AmazonSimpleStorageService), [Amazon EC2](#ec2), [Amazon DynamoDB](#dynamodb), and more\. The single, downloadable package includes the AWS C\+\+ library, code samples, and documentation\.   
 See also [https://aws\.amazon\.com/sdk\-for\-cpp/](https://aws.amazon.com/sdk-for-cpp/).
 
 **AWS SDK for Go**<a name="sdkgo"></a>  
@@ -523,35 +523,35 @@ A software development kit for integrating your Go application with the full sui
 See also [https://aws\.amazon\.com/sdk\-for\-go/](https://aws.amazon.com/sdk-for-go/).
 
 **AWS SDK for Java**<a name="sdkjava"></a>  
-A software development kit that provides Java APIs for many AWS services including Amazon S3, Amazon EC2, [Amazon DynamoDB](#dynamodb), and more\. The single, downloadable package includes the AWS Java library, code samples, and documentation\.    
+A software development kit that provides Java APIs for many AWS services including [Amazon S3](#AmazonSimpleStorageService), [Amazon EC2](#ec2), [Amazon DynamoDB](#dynamodb), and more\. The single, downloadable package includes the AWS Java library, code samples, and documentation\.    
 See also [https://aws\.amazon\.com/sdk\-for\-java/](https://aws.amazon.com/sdk-for-java/).
 
 **AWS SDK for JavaScript in the Browser**<a name="sdkjavabrowser"></a>  
-A software development kit for accessing AWS services from JavaScript code running in the browser\. Authenticate users through Facebook, Google, or Login with Amazon using web identity federation\. Store application data in [Amazon DynamoDB](#dynamodb), and save user files to Amazon S3\.   
+A software development kit for accessing AWS services from JavaScript code running in the browser\. Authenticate users through Facebook, Google, or Login with Amazon using web identity federation\. Store application data in [Amazon DynamoDB](#dynamodb), and save user files to [Amazon S3](#AmazonSimpleStorageService)\.   
 See also [http://docs\.aws\.amazon\.com/sdk\-for\-javascript/v2/developer\-guide/](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/).
 
 **AWS SDK for JavaScript in Node\.js**<a name="sdkjavanodejs"></a>  
-A software development kit for accessing AWS services from JavaScript in Node\.js\. The SDK provides JavaScript objects for AWS services, including Amazon S3, Amazon EC2, [Amazon DynamoDB](#dynamodb), and [Amazon Simple Workflow Service \(Amazon SWF\)](#swf) \. The single, downloadable package includes the AWS JavaScript library and documentation\.   
+A software development kit for accessing AWS services from JavaScript in Node\.js\. The SDK provides JavaScript objects for AWS services, including [Amazon S3](#AmazonSimpleStorageService), [Amazon EC2](#ec2), [Amazon DynamoDB](#dynamodb), and [Amazon Simple Workflow Service \(Amazon SWF\)](#swf) \. The single, downloadable package includes the AWS JavaScript library and documentation\.   
 See also [http://docs\.aws\.amazon\.com/sdk\-for\-javascript/v2/developer\-guide/](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/).
 
 **AWS SDK for \.NET**<a name="sdkdotnet"></a>  
-A software development kit that provides \.NET API actions for AWS services including Amazon S3, Amazon EC2, IAM, and more\. You can download the SDK as multiple service\-specific packages on NuGet\.   
+A software development kit that provides \.NET API actions for AWS services including [Amazon S3](#AmazonSimpleStorageService), [Amazon EC2](#ec2), [IAM](#IAM), and more\. You can download the SDK as multiple service\-specific packages on NuGet\.   
 See also [https://aws\.amazon\.com/sdk\-for\-net/](https://aws.amazon.com/sdk-for-net/).
 
 **AWS SDK for PHP**<a name="sdkphp"></a>  
-A software development kit and open\-source PHP library for integrating your PHP application with AWS services like Amazon S3, [Amazon Glacier](#glacier), and [Amazon DynamoDB](#dynamodb)\.   
+A software development kit and open\-source PHP library for integrating your PHP application with AWS services like [Amazon S3](#AmazonSimpleStorageService), [Amazon Glacier](#glacier), and [Amazon DynamoDB](#dynamodb)\.   
 See also [https://aws\.amazon\.com/sdk\-for\-php/](https://aws.amazon.com/sdk-for-php/).
 
 **AWS SDK for Python \(Boto\)**<a name="sdkpython"></a>  
-A software development kit for using Python to access AWS services like Amazon EC2, Amazon EMR, [Auto Scaling](#AutoScaling), [Amazon Kinesis](#AmazonKinesis), [AWS Lambda](#lambda), and more\.   
+A software development kit for using Python to access AWS services like [Amazon EC2](#ec2), [Amazon EMR](#AmazonElasticMapReduce), [Auto Scaling](#AutoScaling), [Amazon Kinesis](#AmazonKinesis), [AWS Lambda](#lambda), and more\.   
 See also [http://boto\.readthedocs\.org/en/latest/](http://boto.readthedocs.org/en/latest/).
 
 **AWS SDK for Ruby**<a name="sdkruby"></a>  
-A software development kit for accessing AWS services from Ruby\. The SDK provides Ruby classes for many AWS services including Amazon S3, Amazon EC2, [Amazon DynamoDB](#dynamodb)\. and more\. The single, downloadable package includes the AWS Ruby Library and documentation\.   
+A software development kit for accessing AWS services from Ruby\. The SDK provides Ruby classes for many AWS services including [Amazon S3](#AmazonSimpleStorageService), [Amazon EC2](#ec2), [Amazon DynamoDB](#dynamodb)\. and more\. The single, downloadable package includes the AWS Ruby Library and documentation\.   
 See also [https://aws\.amazon\.com/sdk\-for\-ruby/](https://aws.amazon.com/sdk-for-ruby/).
 
 **AWS Security Token Service \(AWS STS\)**<a name="STS"></a>  
-A web service for requesting temporary, limited\-privilege credentials for [AWS Identity and Access Management \(IAM\)](#IAM) users or for users that you authenticate \(federated users\)\.   
+A web service for requesting temporary, limited\-privilege credentials for [AWS Identity and Access Management \(IAM\)](#IAM) users or for users that you authenticate \([federated users](#fed_identity)\)\.   
 See also [https://aws\.amazon\.com/iam/](https://aws.amazon.com/iam/).
 
 **AWS Service Catalog**<a name="servicecatalog"></a>  
@@ -608,7 +608,7 @@ Monitoring of AWS provided metrics derived at a 5\-minute frequency\.
 See [document batch](#documentbatch).
 
 **BGP ASN**<a name="BGPASN"></a>  
-Border Gateway Protocol Autonomous System Number\. A unique identifier for a network, for use in BGP routing\. Amazon EC2 supports all 2\-byte ASN numbers in the range of 1 – 65335, with the exception of 7224, which is reserved\.
+Border Gateway Protocol Autonomous System Number\. A unique identifier for a network, for use in BGP routing\. [Amazon EC2](#ec2) supports all 2\-byte ASN numbers in the range of 1 – 65335, with the exception of 7224, which is reserved\.
 
 **batch prediction**<a name="batch-prediction"></a>  
 Amazon Machine Learning: An operation that processes multiple input data observations at one time \(asynchronously\)\. Unlike real\-time predictions, batch predictions are not available until all predictions have been processed\.   
@@ -628,13 +628,13 @@ Amazon Machine Learning: A machine learning model that predicts the answer to qu
 A list of IP addresses, email addresses, or domains that an [internet service provider](#internetserviceprovider) suspects to be the source of [spam](#spam)\. The ISP blocks incoming email from these addresses or domains\.
 
 **block**<a name="block"></a>  
-A data set\. Amazon EMR breaks large amounts of data into subsets\. Each subset is called a data block\. Amazon EMR assigns an ID to each block and uses a hash table to keep track of block processing\.
+A data set\. [Amazon EMR](#AmazonElasticMapReduce) breaks large amounts of data into subsets\. Each subset is called a data block\. Amazon EMR assigns an ID to each block and uses a hash table to keep track of block processing\.
 
 **block device**<a name="blockdevice"></a>  
 A storage device that supports reading and \(optionally\) writing data in fixed\-size blocks, sectors, or clusters\.
 
 **block device mapping**<a name="blockdevmap"></a>  
-A mapping structure for every AMI and [instance](#instance) that specifies the block devices attached to the instance\.
+A mapping structure for every [AMI](#AmazonMachineImage) and [instance](#instance) that specifies the block devices attached to the instance\.
 
 **blue/green deployment**<a name="bluegreendeployment"></a>  
 AWS CodeDeploy: A deployment method in which the instances in a deployment group \(the original environment\) are replaced by a different set of instances \(the replacement environment\)\.
@@ -655,7 +655,7 @@ A failed email delivery attempt\.
 [Amazon Simple Storage Service \(Amazon S3\)](#AmazonSimpleStorageService): A container for stored objects\. Every object is contained in a bucket\. For example, if the object named `photos/puppy.jpg` is stored in the `johnsmith` bucket, then authorized users can access the object with the URL `http://johnsmith.s3.amazonaws.com/photos/puppy.jpg`\.
 
 **bucket owner**<a name="bucketowner"></a>  
-The person or organization that owns a [bucket](#bucket) in Amazon S3\. Just as Amazon is the only owner of the domain name Amazon\.com, only one person or organization can own a bucket\. 
+The person or organization that owns a [bucket](#bucket) in [Amazon S3](#AmazonSimpleStorageService)\. Just as Amazon is the only owner of the domain name Amazon\.com, only one person or organization can own a bucket\. 
 
 **bundling**<a name="bundling"></a>  
 A commonly used term for creating an [Amazon Machine Image \(AMI\)](#AmazonMachineImage)\. It specifically refers to creating [instance store\-backed AMI](#instancebacked)s\.
@@ -683,13 +683,13 @@ An [EC2 instance](#ec2instance) type used to run the cache node\.
 A container for cache engine parameter values that can be applied to one or more cache clusters\.
 
 **cache security group**<a name="CacheSecurityGroup"></a>  
-A group maintained by ElastiCache that combines ingress authorizations to cache nodes for hosts belonging to Amazon EC2 [security group](#SecurityGroup)s specified through the console or the API or command line tools\.
+A group maintained by ElastiCache that combines ingress authorizations to cache nodes for hosts belonging to [Amazon EC2](#ec2) [security group](#SecurityGroup)s specified through the console or the API or command line tools\.
 
 **canned access policy**<a name="cannedaccesspol"></a>  
 A standard access control policy that you can apply to a [bucket](#bucket) or object\. Options include: private, public\-read, public\-read\-write, and authenticated\-read\.
 
 **canonicalization**<a name="canonicalize"></a>  
-The process of converting data into a standard format that a service such as Amazon S3 can recognize\.
+The process of converting data into a standard format that a service such as [Amazon S3](#AmazonSimpleStorageService) can recognize\.
 
 **capacity**<a name="capacity"></a>  
 The amount of available compute size at a given time\. Each [Auto Scaling group](#AutoScalingGroup) is defined with a minimum and maximum compute size\. A [scaling activity](#ScalingActivity) increases or decreases the capacity within the defined minimum and maximum values\.
@@ -714,7 +714,7 @@ Classless Inter\-Domain Routing\. An internet protocol address allocation and ro
 See also [Classless Inter\-Domain Routing](http://en.wikipedia.org/wiki/CIDR_notation).
 
 **ciphertext**<a name="cipher_text"></a>  
-Information that has been encrypted, as opposed to [plaintext](#plain_text), which is information that has not\.
+Information that has been [encrypted](#encrypt), as opposed to [plaintext](#plain_text), which is information that has not\.
 
 **ClassicLink**<a name="ClassicLink"></a>  
 A feature for linking an EC2\-Classic [instance](#instance) to a [VPC](#VPC), allowing your EC2\-Classic instance to communicate with VPC instances using private IP addresses\.   
@@ -758,14 +758,14 @@ See [customer master key \(CMK\)](#customer_master_key).
 Canonical Name Record\. A type of [resource record](#resourcerecord) in the Domain Name System \(DNS\) that specifies that the domain name is an alias of another, canonical domain name\. More simply, it is an entry in a DNS table that lets you alias one fully qualified domain name to another\. 
 
 **complaint**<a name="complaint"></a>  
-The event in which a [recipient](#recipient) who does not want to receive an email message clicks "Mark as Spam" within the email client, and the [internet service provider](#internetserviceprovider) sends a notification to Amazon SES\.
+The event in which a [recipient](#recipient) who does not want to receive an email message clicks "Mark as Spam" within the email client, and the [internet service provider](#internetserviceprovider) sends a notification to [Amazon SES](#SES)\.
 
 **compound query**<a name="compoundquery"></a>  
 [Amazon CloudSearch](#cloudSearch): A search request that specifies multiple search criteria using the Amazon CloudSearch structured search syntax\.
 
 **condition**<a name="condition"></a>  
-IAM: Any restriction or detail about a permission\. The condition is *D* in the statement "A has permission to do B to C where D applies\."  
-[AWS WAF](#awswaf): A set of attributes that AWS WAF searches for in web requests to AWS [resource](#resource)s such as Amazon CloudFront distributions\. Conditions can include values such as the IP addresses that web requests originate from or values in request headers\. Based on the specified conditions, you can configure AWS WAF to allow or block web requests to AWS resources\.
+[IAM](#IAM): Any restriction or detail about a permission\. The condition is *D* in the statement "A has permission to do B to C where D applies\."  
+[AWS WAF](#awswaf): A set of attributes that AWS WAF searches for in web requests to AWS [resource](#resource)s such as [Amazon CloudFront](#AmazonCF) distributions\. Conditions can include values such as the IP addresses that web requests originate from or values in request headers\. Based on the specified conditions, you can configure AWS WAF to allow or block web requests to AWS resources\.
 
 **conditional parameter**   
 See [mapping](#mapping).
@@ -820,22 +820,22 @@ Core nodes run both the DataNodes and TaskTracker Hadoop daemons\.
 [Amazon CloudSearch](#cloudSearch): A collection of data that you want to search\.
 
 **credential helper**<a name="credentialhelper"></a>  
-[AWS CodeCommit](#AWSCodeCommit): A program that stores credentials for repositories and supplies them to Git when making connections to those repositories\. The AWS CLI includes a credential helper that you can use with Git when connecting to AWS CodeCommit repositories\.
+[AWS CodeCommit](#AWSCodeCommit): A program that stores credentials for repositories and supplies them to Git when making connections to those repositories\. The [AWS CLI](#awscli) includes a credential helper that you can use with Git when connecting to AWS CodeCommit repositories\.
 
 **credentials**<a name="accesscredentials"></a>  
 Also called *access credentials* or *security credentials*\. In authentication and authorization, a system uses credentials to identify who is making a call and whether to allow the requested access\. In AWS, these credentials are typically the [access key ID](#accesskeyID) and the [secret access key](#SecretAccessKey)\.
 
 **cross\-account access**<a name="crossaccountaccess"></a>  
-The process of permitting limited, controlled use of [resource](#resource)s in one AWS [account](#account) by a user in another AWS account\. For example, in [AWS CodeCommit](#AWSCodeCommit) and [AWS CodeDeploy](#AWSCodeDeploy) you can configure cross\-account access so that a user in AWS account A can access an AWS CodeCommit repository created by account B\. Or a pipeline in [AWS CodePipeline](#AWSCodePipeline) created by account A can use AWS CodeDeploy resources created by account B\. In IAM you use a [role](#role) to delegate temporary access to a [user](#AWSUser) in one account to resources in another\.
+The process of permitting limited, controlled use of [resource](#resource)s in one AWS [account](#account) by a user in another AWS account\. For example, in [AWS CodeCommit](#AWSCodeCommit) and [AWS CodeDeploy](#AWSCodeDeploy) you can configure cross\-account access so that a user in AWS account A can access an AWS CodeCommit repository created by account B\. Or a pipeline in [AWS CodePipeline](#AWSCodePipeline) created by account A can use AWS CodeDeploy resources created by account B\. In [IAM](#IAM) you use a [role](#role) to [delegate](#delegation) temporary access to a [user](#AWSUser) in one account to resources in another\.
 
 **cross\-region replication**<a name="cross-region-replication"></a>  
 A client\-side solution for maintaining identical copies of [Amazon DynamoDB](#dynamodb) tables across different AWS [region](#region)s, in near real time\.
 
 **customer gateway**<a name="customergateway"></a>  
-A router or software application on your side of a VPN tunnel that is managed by Amazon VPC\. The internal interfaces of the customer gateway are attached to one or more devices in your home network\. The external interface is attached to the [virtual private gateway](#VPNgateway) across the VPN tunnel\. 
+A router or software application on your side of a VPN tunnel that is managed by [Amazon VPC](#AmazonVirtualPrivateCloud)\. The internal interfaces of the customer gateway are attached to one or more devices in your home network\. The external interface is attached to the [virtual private gateway](#VPNgateway) across the VPN tunnel\. 
 
 **customer managed policy**<a name="customer_managed_policy"></a>  
-An IAM [managed policy](#managed_policy) that you create and manage in your AWS [account](#account)\.
+An [IAM](#IAM) [managed policy](#managed_policy) that you create and manage in your AWS [account](#account)\.
 
 **customer master key \(CMK\)**<a name="customer_master_key"></a>  
 The fundamental [resource](#resource) that [AWS Key Management Service \(AWS KMS\)](#AWS_KMS) manages\. CMKs can be either customer managed keys or AWS managed keys\. Use CMKs inside AWS KMS to [encrypt](#encrypt) or decrypt up to 4 kilobytes of data directly or to encrypt generated data keys, which are then used to encrypt or decrypt larger amounts of data outside of the service\. 
@@ -862,7 +862,7 @@ See also .
 See [schema](#schema).
 
 **data source**<a name="data_source"></a>  
-The database, file, or repository that provides information required by an application or database\. For example, in [AWS OpsWorks](#opsworks), valid data sources include an [instance](#instance) for a stack’s MySQL layer or a stack’s Amazon RDS service layer\. In [Amazon Redshift ](#redshift), valid data sources include text files in an Amazon S3 [bucket](#bucket), in an Amazon EMR cluster, or on a remote host that a cluster can access through an SSH connection\.   
+The database, file, or repository that provides information required by an application or database\. For example, in [AWS OpsWorks](#opsworks), valid data sources include an [instance](#instance) for a stack’s MySQL layer or a stack’s [Amazon RDS](#AmazonRelationalDatabaseService) service layer\. In [Amazon Redshift ](#redshift), valid data sources include text files in an [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket), in an [Amazon EMR](#AmazonElasticMapReduce) cluster, or on a remote host that a cluster can access through an SSH connection\.   
 See also .
 
 **database engine**<a name="databaseengine"></a>  
@@ -913,13 +913,13 @@ Between two AWS accounts: Setting up a trust between the account that owns the r
 See also .
 
 **delete marker**<a name="deletemarker"></a>  
-An object with a key and version ID, but without content\. Amazon S3 inserts delete markers automatically into versioned [bucket](#bucket)s when an object is deleted\.
+An object with a key and version ID, but without content\. [Amazon S3](#AmazonSimpleStorageService) inserts delete markers automatically into versioned [bucket](#bucket)s when an object is deleted\.
 
 **deliverability**<a name="deliverability"></a>  
 The likelihood that an email message will arrive at its intended destination\.
 
 **deliveries**<a name="deliveries"></a>  
-The number of email messages, sent through Amazon SES, that were accepted by an [internet service provider](#internetserviceprovider) for delivery to [recipient](#recipient)s over a period of time\.
+The number of email messages, sent through [Amazon SES](#SES), that were accepted by an [internet service provider](#internetserviceprovider) for delivery to [recipient](#recipient)s over a period of time\.
 
 **deny**<a name="deny"></a>  
 The result of a [policy](#policy) statement that includes deny as the effect, so that a specific action or actions are expressly forbidden for a user, group, or role\. Explicit deny take precedence over explicit [allow](#allow)\. 
@@ -943,7 +943,7 @@ A name–value pair \(for example, InstanceType=m1\.small, or EngineName=mysql\)
 A place where AWS users can post technical questions and feedback to help accelerate their development efforts and to engage with the AWS community\. The discussion forums are located at [https://aws\.amazon\.com/forums/](https://aws.amazon.com/forums/)\.
 
 **distribution**<a name="distribution"></a>  
-A link between an origin server \(such as an Amazon S3 [bucket](#bucket)\) and a domain name, which CloudFront automatically assigns\. Through this link, CloudFront identifies the object you have stored in your [origin server](#originserver)\. 
+A link between an origin server \(such as an [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket)\) and a domain name, which [CloudFront](#AmazonCF) automatically assigns\. Through this link, CloudFront identifies the object you have stored in your [origin server](#originserver)\. 
 
 **DKIM**<a name="DKIM"></a>  
 DomainKeys Identified Mail\. A standard that email senders use to sign their messages\. ISPs use those signatures to verify that messages are legitimate\. For more information, see [http://www\.dkim\.org](http://www.dkim.org)\.
@@ -995,7 +995,7 @@ See [Amazon Elastic Compute Cloud \(Amazon EC2\)](#ec2).
 An AWS standard for compute CPU and memory\. You can use this measure to evaluate the CPU capacity of different [EC2 instance](#ec2instance) types\.
 
 **EC2 instance**<a name="ec2instance"></a>  
-A compute [instance](#instance) in the Amazon EC2 service\. Other AWS services use the term *EC2 instance* to distinguish these instances from other types of instances they support\.
+A compute [instance](#instance) in the [Amazon EC2](#ec2) service\. Other AWS services use the term *EC2 instance* to distinguish these instances from other types of instances they support\.
 
 **ECR**   
 See [Amazon Elastic Container Registry \(Amazon ECR\)](#ecr).
@@ -1004,7 +1004,7 @@ See [Amazon Elastic Container Registry \(Amazon ECR\)](#ecr).
 See [Amazon Elastic Container Service \(Amazon ECS\)](#ecs).
 
 **edge location**<a name="edgeloc"></a>  
-A site that CloudFront uses to cache copies of your content for faster delivery to users at any location\. 
+A site that [CloudFront](#AmazonCF) uses to cache copies of your content for faster delivery to users at any location\. 
 
 **EFS**   
 See [Amazon Elastic File System \(Amazon EFS\)](#efs).
@@ -1019,7 +1019,7 @@ See also .
 See [Amazon Elastic Block Store \(Amazon EBS\)](#EBS).
 
 **Elastic IP address**<a name="ElasticIP"></a>  
-A fixed \(static\) IP address that you have allocated in Amazon EC2 or Amazon VPC and then attached to an [instance](#instance)\. Elastic IP addresses are associated with your account, not a specific instance\. They are *elastic* because you can easily allocate, attach, detach, and free them as your needs change\. Unlike traditional static IP addresses, Elastic IP addresses allow you to mask instance or [Availability Zone](#AZ) failures by rapidly remapping your public IP addresses to another instance\.
+A fixed \(static\) IP address that you have allocated in [Amazon EC2](#ec2) or [Amazon VPC](#AmazonVirtualPrivateCloud) and then attached to an [instance](#instance)\. Elastic IP addresses are associated with your account, not a specific instance\. They are *elastic* because you can easily allocate, attach, detach, and free them as your needs change\. Unlike traditional static IP addresses, Elastic IP addresses allow you to mask instance or [Availability Zone](#AZ) failures by rapidly remapping your public IP addresses to another instance\.
 
 **Elastic Load Balancing**<a name="ELB"></a>  
 A web service that improves an application's availability by distributing incoming traffic between two or more [EC2 instance](#ec2instance)s\.   
@@ -1046,12 +1046,12 @@ A set of key–value pairs that contains additional information associated with 
 **endpoint**<a name="endpoint"></a>  
 A URL that identifies a host and port as the entry point for a web service\. Every web service request contains an endpoint\. Most AWS products provide regional endpoints to enable faster connectivity\.  
 [Amazon ElastiCache](#elasticache): The DNS name of a [cache node](#CacheNode)\.  
-Amazon RDS: The DNS name of a [DB instance](#dbinstance)\.  
+[Amazon RDS](#AmazonRelationalDatabaseService): The DNS name of a [DB instance](#dbinstance)\.  
 [AWS CloudFormation](#CloudFormation): The DNS name or IP address of the server that receives an HTTP request\.
 
 **endpoint port**<a name="endpointport"></a>  
 [Amazon ElastiCache](#elasticache): The port number used by a [cache node](#CacheNode)\.  
-Amazon RDS: The port number used by a [DB instance](#dbinstance)\.
+[Amazon RDS](#AmazonRelationalDatabaseService): The port number used by a [DB instance](#dbinstance)\.
 
 **envelope encryption**<a name="envelope_encryption"></a>  
 The use of a master key and a data key to algorithmically protect data\. The master key is used to encrypt and decrypt the data key and the data key is used to encrypt and decrypt the data itself\. 
@@ -1092,13 +1092,13 @@ See also .
 See also .
 
 **eviction**<a name="eviction"></a>  
-The deletion by CloudFront of an object from an [edge location](#edgeloc) before its expiration time\. If an object in an edge location isn't frequently requested, CloudFront might evict the object \(remove the object before its expiration date\) to make room for objects that are more popular\. 
+The deletion by [CloudFront](#AmazonCF) of an object from an [edge location](#edgeloc) before its expiration time\. If an object in an edge location isn't frequently requested, CloudFront might evict the object \(remove the object before its expiration date\) to make room for objects that are more popular\. 
 
 **exbibyte**<a name="exbibyte"></a>  
 A contraction of exa binary byte, an exbibyte is 2^60 or 1,152,921,504,606,846,976 bytes\. An exabyte \(EB\) is 10^18 or 1,000,000,000,000,000,000 bytes\. 1,024 EiB is a [zebibyte](#zebibyte)\.
 
 **expiration**<a name="expiration"></a>  
-For CloudFront caching, the time when CloudFront stops responding to user requests with an object\. If you don't use headers or CloudFront [distribution](#distribution) settings to specify how long you want objects to stay in an [edge location](#edgeloc), the objects expire after 24 hours\. The next time a user requests an object that has expired, CloudFront forwards the request to the origin\.
+For [CloudFront](#AmazonCF) caching, the time when CloudFront stops responding to user requests with an object\. If you don't use headers or CloudFront [distribution](#distribution) settings to specify how long you want objects to stay in an [edge location](#edgeloc), the objects expire after 24 hours\. The next time a user requests an object that has expired, CloudFront forwards the request to the [origin](#originserver)\.
 
 **explicit launch permission**<a name="explicitlaunchpermission"></a>  
 An [Amazon Machine Image \(AMI\)](#AmazonMachineImage) launch permission granted to a specific AWS [account](#account)\.
@@ -1145,7 +1145,7 @@ The mechanism by which a mailbox provider \(for example, an [internet service pr
 The relative importance of a text field in a search index\. Field weights control how much matches in particular text fields affect a document's relevance score\.
 
 **filter**<a name="filter"></a>  
-A criterion that you specify to limit the results when you list or describe your Amazon EC2 [resource](#resource)s\.
+A criterion that you specify to limit the results when you list or describe your [Amazon EC2](#ec2) [resource](#resource)s\.
 
 **filter query**<a name="filterquery"></a>  
 A way to filter search results without affecting how the results are scored and sorted\. Specified with the [Amazon CloudSearch](#cloudSearch) `fq` parameter\. 
@@ -1195,7 +1195,7 @@ A type of identifier that allows the permissions in a [grant](#grant_perms) to t
 The observations used in the machine learning \(ML\) model training process that include the correct value for the target attribute\. To train an ML model to predict house sales prices, the input observations would typically include prices of previous house sales in the area\. The sale prices of these houses constitute the ground truth\.
 
 **group**<a name="group"></a>  
-A collection of IAM [user](#AWSUser)s\. You can use IAM groups to simplify specifying and managing permissions for multiple users\.
+A collection of [IAM](#IAM) [user](#AWSUser)s\. You can use IAM groups to simplify specifying and managing permissions for multiple users\.
 
 ### H<a name="H"></a>
 
@@ -1258,7 +1258,7 @@ See [user](#AWSUser).
 See [AWS Identity and Access Management \(IAM\)](#IAM).
 
 **identity provider \(IdP\)**<a name="identity_provider"></a>  
-An IAM entity that holds metadata about external identity providers\.
+An [IAM](#IAM) entity that holds metadata about external identity providers\.
 
 **IdP**   
 See [identity provider \(IdP\) ](#identity_provider).
@@ -1267,7 +1267,7 @@ See [identity provider \(IdP\) ](#identity_provider).
 See [Amazon Machine Image \(AMI\)](#AmazonMachineImage).
 
 **import/export station**<a name="importexportstation"></a>  
-A machine that uploads or downloads your data to or from Amazon S3\.
+A machine that uploads or downloads your data to or from [Amazon S3](#AmazonSimpleStorageService)\.
 
 **import log**<a name="importlog"></a>  
 A report that contains details about how [AWS Import/Export](#AWSImportExport) processed your data\.
@@ -1285,7 +1285,7 @@ A name–value pair that is included in an [Amazon CloudSearch](#cloudSearch) do
 Configuration settings that define an [Amazon CloudSearch](#cloudSearch) domain's index fields, how document data is mapped to those index fields, and how the index fields can be used\. 
 
 **inline policy**<a name="inline_policy"></a>  
-An IAM [policy](#policy) that is embedded in a single IAM [user](#AWSUser), [group](#group), or [role](#role)\.
+An [IAM](#IAM) [policy](#policy) that is embedded in a single IAM [user](#AWSUser), [group](#group), or [role](#role)\.
 
 **input data**<a name="input-data"></a>  
 Amazon Machine Learning: The observations that you provide to Amazon Machine Learning to train and evaluate a machine learning model and generate predictions\.
@@ -1300,13 +1300,13 @@ A general [instance type](#instancetype) grouping using either storage or CPU ca
 A [Hadoop](#Hadoop) cluster contains one master instance group that contains one [master node](#masternode), a core instance group containing one or more [core node](#corenode) and an optional [task node](#tasknode) instance group, which can contain any number of task nodes\. 
 
 **instance profile**<a name="instanceprofile"></a>  
-A container that passes IAM [role](#role) information to an [EC2 instance](#ec2instance) at launch\.
+A container that passes [IAM](#IAM) [role](#role) information to an [EC2 instance](#ec2instance) at launch\.
 
 **instance store**<a name="instancestore"></a>  
 Disk storage that is physically attached to the host computer for an [EC2 instance](#ec2instance), and therefore has the same lifespan as the instance\. When the instance is terminated, you lose any data in the instance store\. 
 
 **instance store\-backed AMI**<a name="instancebacked"></a>  
-A type of [Amazon Machine Image \(AMI\)](#AmazonMachineImage) whose [instance](#instance)s use an [instance store](#instancestore) [volume](#volume) as the root device\. Compare this with instances launched from Amazon EBS\-backed AMIs, which use an Amazon EBS volume as the root device\.
+A type of [Amazon Machine Image \(AMI\)](#AmazonMachineImage) whose [instance](#instance)s use an [instance store](#instancestore) [volume](#volume) as the root device\. Compare this with instances launched from [Amazon EBS](#EBS)\-backed AMIs, which use an Amazon EBS volume as the root device\.
 
 **instance type**<a name="instancetype"></a>  
 A specification that defines the memory, CPU, storage capacity, and usage cost for an [instance](#instance)\. Some instance types are designed for standard applications, whereas others are designed for CPU\-intensive, memory\-intensive applications, and so on\. 
@@ -1321,16 +1321,16 @@ A company that provides subscribers with access to the internet\. Many ISPs are 
 A special action in a [AWS CloudFormation](#CloudFormation) template that assigns values to properties not available until runtime\. These functions follow the format *Fn::Attribute*, such as `Fn::GetAtt`\. Arguments for intrinsic functions can be parameters, pseudo parameters, or the output of other intrinsic functions\.
 
 **IP address**<a name="IPaddress"></a>  
-A numerical address \(for example, 192\.0\.2\.44\) that networked devices use to communicate with one another using the Internet Protocol \(IP\)\. All [EC2 instance](#ec2instance)s are assigned two IP addresses at launch, which are directly mapped to each other through network address translation \([NAT](#nat)\): a private IP address \(following RFC 1918\) and a public IP address\. Instances launched in a VPC are assigned only a private IP address\. Instances launched in your default VPC are assigned both a private IP address and a public IP address\.
+A numerical address \(for example, 192\.0\.2\.44\) that networked devices use to communicate with one another using the Internet Protocol \(IP\)\. All [EC2 instance](#ec2instance)s are assigned two IP addresses at launch, which are directly mapped to each other through network address translation \([NAT](#nat)\): a private IP address \(following RFC 1918\) and a public IP address\. Instances launched in a [VPC](#AmazonVirtualPrivateCloud) are assigned only a private IP address\. Instances launched in your default VPC are assigned both a private IP address and a public IP address\.
 
 **IP match condition**<a name="IPmatchcondition"></a>  
-[AWS WAF](#awswaf): An attribute that specifies the IP addresses or IP address ranges that web requests originate from\. Based on the specified IP addresses, you can configure AWS WAF to allow or block web requests to AWS [resource](#resource)s such as Amazon CloudFront distributions\.
+[AWS WAF](#awswaf): An attribute that specifies the IP addresses or IP address ranges that web requests originate from\. Based on the specified IP addresses, you can configure AWS WAF to allow or block web requests to AWS [resource](#resource)s such as [Amazon CloudFront](#AmazonCF) distributions\.
 
 **ISP**   
 See [internet service provider](#internetserviceprovider).
 
 **issuer**<a name="issuer"></a>  
-The person who writes a [policy](#policy) to grant permissions to a [resource](#resource)\. The issuer \(by definition\) is always the resource owner\. AWS does not permit Amazon SQS users to create policies for resources they don't own\. If John is the resource owner, AWS authenticates John's identity when he submits the policy he's written to grant permissions for that resource\.
+The person who writes a [policy](#policy) to grant permissions to a [resource](#resource)\. The issuer \(by definition\) is always the resource owner\. AWS does not permit [Amazon SQS](#AmazonSimpleQueueService) users to create policies for resources they don't own\. If John is the resource owner, AWS authenticates John's identity when he submits the policy he's written to grant permissions for that resource\.
 
 **item**<a name="item"></a>  
 A group of attributes that is uniquely identifiable among all of the other items\. Items in [Amazon DynamoDB](#dynamodb) are similar in many ways to rows, records, or tuples in other database systems\.
@@ -1340,7 +1340,7 @@ A group of attributes that is uniquely identifiable among all of the other items
  [Numbers and Symbols](#numbers) | [A](#A) | [B](#B) | [C](#C) | [D](#D) | [E](#E) | [F](#F) | [G](#G) | [H](#H) | [I](#I) | [J](#J) | [K](#K) | [L](#L) | [M](#M) | [N](#N) | [O](#O) | [P](#P) | [Q](#Q) | [R](#R) | [S](#S) | [T](#T) | [U](#U) | [V](#V) | [W](#W) | [X, Y, Z](#XYZ) 
 
 **job flow**<a name="jobflow"></a>  
-Amazon EMR: One or more [step](#step)s that specify all of the functions to be performed on the data\.
+[Amazon EMR](#AmazonElasticMapReduce): One or more [step](#step)s that specify all of the functions to be performed on the data\.
 
 **job ID**<a name="jobID"></a>  
 A five\-character, alphanumeric string that uniquely identifies an [AWS Import/Export](#AWSImportExport) storage device in your shipment\. AWS issues the job ID in response to a `CREATE JOB` email command\. 
@@ -1363,7 +1363,7 @@ The location where email messages that various filters determine to be of lesser
 A credential that identifies an AWS [account](#account) or [user](#AWSUser) to AWS \(such as the AWS [secret access key](#SecretAccessKey)\)\.
 [Amazon Simple Storage Service \(Amazon S3\)](#AmazonSimpleStorageService), [Amazon EMR \(Amazon EMR\)](#AmazonElasticMapReduce): The unique identifier for an object in a [bucket](#bucket)\. Every object in a bucket has exactly one key\. Because a bucket and key together uniquely identify each object, you can think of Amazon S3 as a basic data map between the *bucket \+ key*, and the object itself\. You can uniquely address every object in Amazon S3 through the combination of the web service endpoint, bucket name, and key, as in this example: `http://doc.s3.amazonaws.com/2006-03-01/AmazonS3.wsdl`, where `doc` is the name of the bucket, and `2006-03-01/AmazonS3.wsdl` is the key\.
 [AWS Import/Export](#AWSImportExport): The name of an object in Amazon S3\. It is a sequence of Unicode characters whose UTF\-8 encoding cannot exceed 1024 bytes\. If a key, for example, logPrefix \+ import\-log\-JOBID, is longer than 1024 bytes, [AWS Elastic Beanstalk](#Beanstalk) returns an `InvalidManifestField` error\. 
-IAM: In a [policy](#policy), a specific characteristic that is the basis for restricting access \(such as the current time, or the IP address of the requester\)\.
+[IAM](#IAM): In a [policy](#policy), a specific characteristic that is the basis for restricting access \(such as the current time, or the IP address of the requester\)\.
 Tagging resources: A general [tag](#tag) label that acts like a category for more specific tag values\. For example, you might have [EC2 instance](#ec2instance) with the tag key of *Owner* and the tag value of *Jan*\. You can tag an AWS [resource](#resource) with up to 10 key–value pairs\. Not all AWS resources can be tagged\.
 
 **key pair**<a name="keypair"></a>  
@@ -1407,7 +1407,7 @@ See also .
 See also .
 
 **load balancer**<a name="loadbalancer"></a>  
-A DNS name combined with a set of ports, which together provide a destination for all requests intended for your application\. A load balancer can distribute traffic to multiple application instances across every [Availability Zone](#AZ) within a [region](#region)\. Load balancers can span multiple Availability Zones within an Amazon EC2 region, but they cannot span multiple regions\. 
+A DNS name combined with a set of ports, which together provide a destination for all requests intended for your application\. A load balancer can distribute traffic to multiple application instances across every [Availability Zone](#AZ) within a [region](#region)\. Load balancers can span multiple Availability Zones within an [Amazon EC2](#ec2) region, but they cannot span multiple regions\. 
 
 **local secondary index**<a name="local-secondary-index"></a>  
 An index that has the same partition key as the table, but a different sort key\. A local secondary index is local in the sense that every partition of a local secondary index is scoped to a table partition that has the same partition key value\.   
@@ -1427,13 +1427,13 @@ Software that transports email messages from one computer to another by using a 
 An organization that provides email mailbox hosting services\. Mailbox providers are sometimes referred to as [internet service provider](#internetserviceprovider)s, even if they only provide mailbox services\.
 
 **mailbox simulator**<a name="mailboxsimulator"></a>  
-A set of email addresses that you can use to test an Amazon SES\-based email sending application without sending messages to actual recipients\. Each email address represents a specific scenario \(such as a bounce or complaint\) and generates a typical response that is specific to the scenario\.
+A set of email addresses that you can use to test an [Amazon SES](#SES)\-based email sending application without sending messages to actual recipients\. Each email address represents a specific scenario \(such as a bounce or complaint\) and generates a typical response that is specific to the scenario\.
 
 **main route table**<a name="MainRouteTable"></a>  
 The default [route table](#routetable) that any new [VPC](#VPC) [subnet](#subnet) uses for routing\. You can associate a subnet with a different route table of your choice\. You can also change which route table is the main route table\.
 
 **managed policy**<a name="managed_policy"></a>  
-A standalone IAM [policy](#policy) that you can attach to multiple [user](#AWSUser)s, [group](#group)s, and [role](#role)s in your IAM [account](#account)\. Managed policies can either be AWS managed policies \(which are created and managed by AWS\) or customer managed policies \(which you create and manage in your AWS account\)\.
+A standalone [IAM](#IAM) [policy](#policy) that you can attach to multiple [user](#AWSUser)s, [group](#group)s, and [role](#role)s in your IAM [account](#account)\. Managed policies can either be AWS managed policies \(which are created and managed by AWS\) or customer managed policies \(which you create and manage in your AWS account\)\.
 
 **manifest**<a name="manifest"></a>  
 When sending a *create job* request for an import or export operation, you describe your job in a text file called a manifest\. The manifest file is a YAML\-formatted file that specifies how to transfer data between your storage device and the AWS cloud\.
@@ -1451,10 +1451,10 @@ See [pagination token](#PaginationToken).
 A process running on an [Amazon Machine Image \(AMI\)](#AmazonMachineImage) that keeps track of the work its core and task nodes complete\. 
 
 **maximum price**<a name="maxprice"></a>  
- The maximum price you will pay to launch one or more [Spot Instance](#SpotInstance)s\. If your maximum price exceeds the current [Spot price](#SpotPrice) and your restrictions are met, Amazon EC2 launches instances on your behalf\. 
+ The maximum price you will pay to launch one or more [Spot Instance](#SpotInstance)s\. If your maximum price exceeds the current [Spot price](#SpotPrice) and your restrictions are met, [Amazon EC2](#ec2) launches instances on your behalf\. 
 
 **maximum send rate**<a name="maximumsendrate"></a>  
-The maximum number of email messages that you can send per second using Amazon SES\.
+The maximum number of email messages that you can send per second using [Amazon SES](#SES)\.
 
 **mebibyte**<a name="mebibyte"></a>  
 A contraction of mega binary byte, a mebibyte is 2^20 or 1,048,576 bytes\. A megabyte \(MB\) is 10^6 or 1,000,000 bytes\. 1,024 MiB is a [gibibyte](#gibibyte)\.
@@ -1537,7 +1537,7 @@ A [NAT](#nat) device, configured by a user, that performs network address transl
 See also .
 
 **network ACL**<a name="NetworkACL"></a>  
-An optional layer of security that acts as a firewall for controlling traffic in and out of a [subnet](#subnet)\. You can associate multiple subnets with a single network ACL, but a subnet can be associated with only one network ACL at a time\.
+An optional layer of security that acts as a firewall for controlling traffic in and out of a [subnet](#subnet)\. You can associate multiple subnets with a single network [ACL](#ACL), but a subnet can be associated with only one network ACL at a time\.
 
 **Network Address Translation and Protocol Translation**<a name="networkAddressTranslation"></a>  
 \([NAT](#nat)\-PT\) An internet protocol standard defined in RFC 2766\.   
@@ -1562,7 +1562,7 @@ A property of [AWS CloudFormation](#CloudFormation) parameters that prevent the 
 Nonrelational database systems that are highly available, scalable, and optimized for high performance\. Instead of the relational model, NoSQL databases \(like [Amazon DynamoDB](#dynamodb)\) use alternate models for data management, such as key–value pairs or document storage\. 
 
 **null object**<a name="nullobject"></a>  
-A null object is one whose version ID is null\. Amazon S3 adds a null object to a [bucket](#bucket) when [versioning](#versioning) for that bucket is suspended\. It is possible to have only one null object for each key in a bucket\.
+A null object is one whose version ID is null\. [Amazon S3](#AmazonSimpleStorageService) adds a null object to a [bucket](#bucket) when [versioning](#versioning) for that bucket is suspended\. It is possible to have only one null object for each key in a bucket\.
 
 **number of passes**<a name="number-of-passes"></a>  
 The number of times that you allow Amazon Machine Learning to use the same data records to train a machine learning model\.
@@ -1579,7 +1579,7 @@ The number of times that you allow Amazon Machine Learning to use the same data 
 Amazon Machine Learning: A single instance of data that Amazon Machine Learning \(Amazon ML\) uses to either train a machine learning model how to predict or to generate a prediction\. Each row in an Amazon ML input data file is an observation\.
 
 **On\-Demand Instance**<a name="ondemandinstance"></a>  
-An Amazon EC2 pricing option that charges you for compute capacity by the hour with no long\-term commitment\.
+An [Amazon EC2](#ec2) pricing option that charges you for compute capacity by the hour with no long\-term commitment\.
 
 **operation**<a name="operation"></a>  
 An API function\. Also called an *action*\.
@@ -1594,10 +1594,10 @@ A strategy to ensure that an item that you want to update has not been modified 
 [AWS Organizations](#awsorganizations): A container for accounts within a [root](#root) of an organization\. An organizational unit \(OU\) can contain other OUs\.
 
 **origin access identity**<a name="originaccessidentity"></a>  
-Also called OAI\. When using Amazon CloudFront to serve content with an Amazon S3 [bucket](#bucket) as the origin, a virtual identity that you use to require users to access your content through CloudFront URLs instead of Amazon S3 URLs\. Usually used with CloudFront [private content](#privatecontent)\. 
+Also called OAI\. When using [Amazon CloudFront](#AmazonCF) to serve content with an [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket) as the origin, a virtual identity that you use to require users to access your content through CloudFront URLs instead of Amazon S3 URLs\. Usually used with CloudFront [private content](#privatecontent)\. 
 
 **origin server**<a name="originserver"></a>  
-The Amazon S3 [bucket](#bucket) or custom origin containing the definitive original version of the content you deliver through CloudFront\.
+The [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket) or custom origin containing the definitive original version of the content you deliver through [CloudFront](#AmazonCF)\.
 
 **original environment**<a name="originalenvironment"></a>  
 The instances in a deployment group at the start of an AWS CodeDeploy blue/green deployment\.
@@ -1629,7 +1629,7 @@ A marker that indicates that an API response contains a subset of a larger list 
 See also .
 
 **paid AMI**<a name="paidAMI"></a>  
-An [Amazon Machine Image \(AMI\)](#AmazonMachineImage) that you sell to other Amazon EC2 users on [AWS Marketplace](#marketplace)\.
+An [Amazon Machine Image \(AMI\)](#AmazonMachineImage) that you sell to other [Amazon EC2](#ec2) users on [AWS Marketplace](#marketplace)\.
 
 **paravirtual virtualization**<a name="paravirtual"></a>   
 See [PV virtualization](#PV).
@@ -1652,10 +1652,10 @@ A contraction of peta binary byte, a pebibyte is 2^50 or 1,125,899,906,842,624 b
 See [sampling period](#SamplingPeriod).
 
 **permission**<a name="permission"></a>  
-A statement within a [policy](#policy) that allows or denies access to a particular [resource](#resource)\. You can state any permission like this: "A has permission to do B to C\." For example, Jane \(A\) has permission to read messages \(B\) from John's Amazon SQS queue \(C\)\. Whenever Jane sends a request to Amazon SQS to use John's queue, the service checks to see if she has permission and if the request satisfies the conditions John set forth in the permission\.
+A statement within a [policy](#policy) that allows or denies access to a particular [resource](#resource)\. You can state any permission like this: "A has permission to do B to C\." For example, Jane \(A\) has permission to read messages \(B\) from John's [Amazon SQS](#AmazonSimpleQueueService) queue \(C\)\. Whenever Jane sends a request to Amazon SQS to use John's queue, the service checks to see if she has permission and if the request satisfies the conditions John set forth in the permission\.
 
 **persistent storage**<a name="persistentstorage"></a>  
-A data storage solution where the data remains intact until it is deleted\. Options within AWS include: Amazon S3, Amazon RDS, [Amazon DynamoDB](#dynamodb), and other services\.
+A data storage solution where the data remains intact until it is deleted\. Options within [AWS](#amazonwebservices) include: [Amazon S3](#AmazonSimpleStorageService), [Amazon RDS](#AmazonRelationalDatabaseService), [Amazon DynamoDB](#dynamodb), and other services\.
 
 **physical name**<a name="physical-name"></a>  
 A unique label that [AWS CloudFormation](#CloudFormation) assigns to each [resource](#resource) when creating a [stack](#stack)\. Some AWS CloudFormation commands accept the physical name as a value with the `--physical-name` parameter\.
@@ -1664,20 +1664,20 @@ A unique label that [AWS CloudFormation](#CloudFormation) assigns to each [resou
 [AWS CodePipeline](#AWSCodePipeline): A workflow construct that defines the way software changes go through a release process\.
 
 **plaintext**<a name="plain_text"></a>  
-Information that has not been encrypted, as opposed to [ciphertext](#cipher_text)\.
+Information that has not been [encrypted](#encrypt), as opposed to [ciphertext](#cipher_text)\.
 
 **policy**<a name="policy"></a>  
-IAM: A document defining permissions that apply to a user, group, or role; the permissions in turn determine what users can do in AWS\. A policy typically [allow](#allow)s access to specific actions, and can optionally grant that the actions are allowed for specific [resource](#resource)s, like [EC2 instance](#ec2instance)s, Amazon S3 [bucket](#bucket)s, and so on\. Policies can also explicitly [deny](#deny) access\.  
+[IAM](#IAM): A document defining permissions that apply to a user, group, or role; the permissions in turn determine what users can do in AWS\. A policy typically [allow](#allow)s access to specific actions, and can optionally grant that the actions are allowed for specific [resource](#resource)s, like [EC2 instance](#ec2instance)s, [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket)s, and so on\. Policies can also explicitly [deny](#deny) access\.  
 [Auto Scaling](#AutoScaling): An object that stores the information needed to launch or terminate instances for an Auto Scaling group\. Executing the policy causes instances to be launched or terminated\. You can configure an [alarm](#alarm) to invoke an Auto Scaling policy\.
 
 **policy generator**<a name="policy_generator"></a>  
-A tool in the IAM [AWS Management Console](#AWSManagementConsole) that helps you build a [policy](#policy) by selecting elements from lists of available options\. 
+A tool in the [IAM](#IAM) [AWS Management Console](#AWSManagementConsole) that helps you build a [policy](#policy) by selecting elements from lists of available options\. 
 
 **policy simulator**<a name="policy_simulator"></a>  
-A tool in the IAM [AWS Management Console](#AWSManagementConsole) that helps you test and troubleshoot policies so you can see their effects in real\-world scenarios\. 
+A tool in the [IAM](#IAM) [AWS Management Console](#AWSManagementConsole) that helps you test and troubleshoot [policies](#policy) so you can see their effects in real\-world scenarios\. 
 
 **policy validator**<a name="policy_validator"></a>  
-A tool in the IAM [AWS Management Console](#AWSManagementConsole) that examines your existing IAM access control policies to ensure that they comply with the IAM policy grammar\.
+A tool in the [IAM](#IAM) [AWS Management Console](#AWSManagementConsole) that examines your existing IAM access control [policies](#policy) to ensure that they comply with the IAM policy grammar\.
 
 **presigned URL**<a name="presignedURL"></a>  
 A web address that uses [query string authentication](#querystringauthentication)\. 
@@ -1701,10 +1701,10 @@ See [shard](#shard).
 The [user](#AWSUser), service, or [account](#account) that receives permissions that are defined in a [policy](#policy)\. The principal is A in the statement "A has permission to do B to C\."
 
 **private content**<a name="privatecontent"></a>  
-When using Amazon CloudFront to serve content with an Amazon S3 [bucket](#bucket) as the origin, a method of controlling access to your content by requiring users to use signed URLs\. Signed URLs can restrict user access based on the current date and time and/or the IP addresses that the requests originate from\.
+When using [Amazon CloudFront](#AmazonCF) to serve content with an [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket) as the origin, a method of controlling access to your content by requiring users to use signed URLs\. Signed URLs can restrict user access based on the current date and time and/or the IP addresses that the requests originate from\.
 
 **private IP address**<a name="privateIP"></a>  
-A private numerical address \(for example, 192\.0\.2\.44\) that networked devices use to communicate with one another using the Internet Protocol \(IP\)\. All [EC2 instance](#ec2instance)ss are assigned two IP addresses at launch, which are directly mapped to each other through Network Address Translation \([NAT](#nat)\): a private address \(following RFC 1918\) and a public address\. *Exception:* Instances launched in Amazon VPC are assigned only a private IP address\.
+A private numerical address \(for example, 192\.0\.2\.44\) that networked devices use to communicate with one another using the Internet Protocol \(IP\)\. All [EC2 instance](#ec2instance)ss are assigned two IP addresses at launch, which are directly mapped to each other through Network Address Translation \([NAT](#nat)\): a private address \(following RFC 1918\) and a public address\. *Exception:* Instances launched in [Amazon VPC](#AmazonVirtualPrivateCloud) are assigned only a private IP address\.
 
 **private subnet**<a name="privateSubnet"></a>  
 A [VPC](#VPC) [subnet](#subnet) whose instances cannot be reached from the internet\.
@@ -1719,7 +1719,7 @@ See [resource property](#resourceproperty).
 A [JSON](#json)\-compliant markup standard for declaring properties, mappings, and output values in an [AWS CloudFormation](#CloudFormation) template\. 
 
 **Provisioned IOPS**<a name="provisionedIOPS"></a>  
-A storage option designed to deliver fast, predictable, and consistent I/O performance\. When you specify an IOPS rate while creating a DB instance, Amazon RDS provisions that IOPS rate for the lifetime of the DB instance\.
+A storage option designed to deliver fast, predictable, and consistent I/O performance\. When you specify an IOPS rate while creating a DB instance, [Amazon RDS](#AmazonRelationalDatabaseService) provisions that IOPS rate for the lifetime of the DB instance\.
 
 **pseudo parameter**<a name="pseudoparameter"></a>  
 A predefined setting, such as `AWS:StackName` that can be used in [AWS CloudFormation](#CloudFormation) templates without having to declare them\. You can use pseudo parameters anywhere you can use a regular parameter\.
@@ -1732,7 +1732,7 @@ A large collection of public information that can be seamlessly integrated into 
 See also [https://aws\.amazon\.com/publicdatasets](https://aws.amazon.com/publicdatasets/).
 
 **public IP address**<a name="publicIP"></a>  
-A pubic numerical address \(for example, 192\.0\.2\.44\) that networked devices use to communicate with one another using the Internet Protocol \(IP\)\. [EC2 instance](#ec2instance)s are assigned two IP addresses at launch, which are directly mapped to each other through Network Address Translation \([NAT](#nat)\): a private address \(following RFC 1918\) and a public address\. *Exception:* Instances launched in Amazon VPC are assigned only a private IP address\.
+A pubic numerical address \(for example, 192\.0\.2\.44\) that networked devices use to communicate with one another using the Internet Protocol \(IP\)\. [EC2 instance](#ec2instance)s are assigned two IP addresses at launch, which are directly mapped to each other through Network Address Translation \([NAT](#nat)\): a private address \(following RFC 1918\) and a public address\. *Exception:* Instances launched in [Amazon VPC](#AmazonVirtualPrivateCloud) are assigned only a private IP address\.
 
 **public subnet**<a name="publicSubnet"></a>  
 A [subnet](#subnet) whose instances can be reached from the internet\.
@@ -1762,7 +1762,7 @@ A sequence of messages or jobs that are held in temporary storage awaiting trans
 A web address that uniquely identifies a queue\.
 
 **quota**<a name="quota"></a>  
-Amazon RDS: The maximum number of [DB instance](#dbinstance)s and available storage you can use\.  
+[Amazon RDS](#AmazonRelationalDatabaseService): The maximum number of [DB instance](#dbinstance)s and available storage you can use\.  
 [Amazon ElastiCache](#elasticache): The maximum number of the following items:  
 
 + The number of cache clusters for each AWS [account](#account)
@@ -1785,14 +1785,14 @@ A type of *sendmail* request with which you can specify the email headers and MI
 See [Amazon Relational Database Service \(Amazon RDS\)](#AmazonRelationalDatabaseService).
 
 **read replica**<a name="readreplica"></a>  
-Amazon RDS: An active copy of another DB instance\. Any updates to the data on the source DB instance are replicated to the read replica DB instance using the built\-in replication feature of MySQL 5\.1\.
+[Amazon RDS](#AmazonRelationalDatabaseService): An active copy of another DB instance\. Any updates to the data on the source DB instance are replicated to the read replica DB instance using the built\-in replication feature of MySQL 5\.1\.
 
 **real\-time predictions**<a name="real-time-predictions"></a>  
 Amazon Machine Learning: Synchronously generated predictions for individual data observations\.   
 See also .
 
 **receipt handle**<a name="receipthandle"></a>  
-Amazon SQS: An identifier that you get when you receive a message from the queue\. This identifier is required to delete a message from the queue or when changing a message's visibility timeout\.
+[Amazon SQS](#AmazonSimpleQueueService): An identifier that you get when you receive a message from the queue\. This identifier is required to delete a message from the queue or when changing a message's visibility timeout\.
 
 **receiver**<a name="receiver"></a>  
 The entity that consists of the network systems, software, and policies that manage email delivery for a [recipient](#recipient)\. 
@@ -1804,7 +1804,7 @@ The entity that consists of the network systems, software, and policies that man
 A fast, open source, in\-memory key\-value data structure store\. Redis comes with a set of versatile in\-memory data structures with which you can easily create a variety of custom applications\.
 
 **reference**<a name="prop_reference"></a>  
-A means of inserting a property from one AWS [resource](#resource) into another\. For example, you could insert an Amazon EC2 [security group](#SecurityGroup) property into an Amazon RDS resource\.
+A means of inserting a property from one AWS [resource](#resource) into another\. For example, you could insert an [Amazon EC2](#ec2) [security group](#SecurityGroup) property into an [Amazon RDS](#AmazonRelationalDatabaseService) resource\.
 
 **region**<a name="region"></a>  
 A named set of AWS [resource](#resource)s in the same geographical area\. A region comprises at least two [Availability Zone](#AZ)s\.
@@ -1831,26 +1831,26 @@ The email address to which an email reply is sent\. This is different from the [
 See [REST](#REST).
 
 **reputation**<a name="reputation"></a>  
-1\. An Amazon SES metric, based on factors that might include [bounce](#bounce)s, [complaint](#complaint)s, and other metrics, regarding whether or not a customer is sending high\-quality email\.  
+1\. An [Amazon SES](#SES) metric, based on factors that might include [bounce](#bounce)s, [complaint](#complaint)s, and other metrics, regarding whether or not a customer is sending high\-quality email\.  
 2\. A measure of confidence, as judged by an [internet service provider](#internetserviceprovider) or other entity that an IP address that they are receiving email from is not the source of [spam](#spam)\.
 
 **requester**<a name="requester"></a>  
 The person \(or application\) that sends a request to AWS to perform a specific action\. When AWS receives a request, it first evaluates the requester's permissions to determine whether the requester is allowed to perform the request action \(if applicable, for the requested [resource](#resource)\)\.
 
 **Requester Pays**<a name="RequesterPays"></a>  
-An Amazon S3 feature that allows a [bucket owner](#bucketowner) to specify that anyone who requests access to objects in a particular [bucket](#bucket) must pay the data transfer and request costs\.
+An [Amazon S3](#AmazonSimpleStorageService) feature that allows a [bucket owner](#bucketowner) to specify that anyone who requests access to objects in a particular [bucket](#bucket) must pay the data transfer and request costs\.
 
 **reservation**<a name="reservation"></a>  
 A collection of [EC2 instance](#ec2instance)s started as part of the same launch request\. Not to be confused with a [Reserved Instance](#reservedinstance)\.
 
 **Reserved Instance**<a name="reservedinstance"></a>  
-A pricing option for [EC2 instance](#ec2instance)s that discounts the on\-demand usage charge for instances that meet the specified parameters\. Customers pay for the entire term of the instance, regardless of how they use it\.
+A pricing option for [EC2 instance](#ec2instance)s that discounts the [on\-demand](#ondemandinstance) usage charge for instances that meet the specified parameters\. Customers pay for the entire term of the instance, regardless of how they use it\.
 
 **Reserved Instance Marketplace**<a name="reservedinstancemarketplace"></a>  
 An online exchange that matches sellers who have reserved capacity that they no longer need with buyers who are looking to purchase additional capacity\. [Reserved Instance](#reservedinstance)s that you purchase from third\-party sellers have less than a full standard term remaining and can be sold at different upfront prices\. The usage or reoccurring fees remain the same as the fees set when the Reserved Instances were originally purchased\. Full standard terms for Reserved Instances available from AWS run for one year or three years\.
 
 **resource**<a name="resource"></a>  
-An entity that users can work with in AWS, such as an [EC2 instance](#ec2instance), an [Amazon DynamoDB](#dynamodb) table, an Amazon S3 [bucket](#bucket), an IAM user, an [AWS OpsWorks](#opsworks) [stack](#stack), and so on\.
+An entity that users can work with in AWS, such as an [EC2 instance](#ec2instance), an [Amazon DynamoDB](#dynamodb) table, an [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket), an [IAM](#IAM) user, an [AWS OpsWorks](#opsworks) [stack](#stack), and so on\.
 
 **resource property**<a name="resourceproperty"></a>  
 A value required when including an AWS [resource](#resource) in an [AWS CloudFormation](#CloudFormation) [stack](#stack)\. Each resource may have one or more properties associated with it\. For example, an `AWS::EC2::Instance` resource may have a `UserData` property\. In an AWS CloudFormation template, resources must declare a properties section, even if the resource has no properties\.
@@ -1878,7 +1878,7 @@ See [Query](#Query).
 The email address to which bounced email is returned\. The return path is specified in the header of the original email\. This is different from the [reply path](#replypath)\.
 
 **revision**<a name="revision"></a>  
-[AWS CodePipeline](#AWSCodePipeline): A change made to a source that is configured in a source action, such as a pushed commit to a [GitHub](#github) repository or an update to a file in a versioned Amazon S3 [bucket](#bucket)\. 
+[AWS CodePipeline](#AWSCodePipeline): A change made to a source that is configured in a source action, such as a pushed commit to a [GitHub](#github) repository or an update to a file in a versioned [Amazon S3](#AmazonSimpleStorageService) [bucket](#bucket)\. 
 
 **role**<a name="role"></a>  
 A tool for giving temporary access to AWS [resource](#resource)s in your AWS [account](#account)\.
@@ -1893,7 +1893,7 @@ A return to a previous state that follows the failure to create an object, such 
 Authentication information associated with the AWS [account](#account) owner\. 
 
 **root device volume**<a name="rootdevicevolume"></a>  
-A [volume](#volume) that contains the image used to boot the [instance](#instance) \(also known as a *root device*\)\. If you launched the instance from an AMI backed by [instance store](#instancestore), this is an instance store [volume](#volume) created from a template stored in Amazon S3\. If you launched the instance from an AMI backed by Amazon EBS, this is an Amazon EBS volume created from an Amazon EBS snapshot\.
+A [volume](#volume) that contains the image used to boot the [instance](#instance) \(also known as a *root device*\)\. If you launched the instance from an [AMI](#AmazonMachineImage) backed by [instance store](#instancestore), this is an instance store [volume](#volume) created from a template stored in [Amazon S3](#AmazonSimpleStorageService)\. If you launched the instance from an AMI backed by [Amazon EBS](#EBS), this is an Amazon EBS volume created from an Amazon EBS snapshot\.
 
 **route table**<a name="routetable"></a>  
 A set of routing rules that controls the traffic leaving any [subnet](#subnet) that is associated with the route table\. You can associate multiple subnets with a single route table, but a subnet can be associated with only one route table at a time\.
@@ -1902,7 +1902,7 @@ A set of routing rules that controls the traffic leaving any [subnet](#subnet) t
 row ID\.Amazon Machine Learning: An attribute in the input data that you can include in the evaluation or prediction output to make it easier to associate a prediction with an observation\.
 
 **rule**<a name="rule"></a>  
-[AWS WAF](#awswaf): A set of conditions that AWS WAF searches for in web requests to AWS [resource](#resource)s such as Amazon CloudFront distributions\. You add rules to a web ACL, and then specify whether you want to allow or block web requests based on each rule\.
+[AWS WAF](#awswaf): A set of conditions that AWS WAF searches for in web requests to AWS [resource](#resource)s such as [Amazon CloudFront](#AmazonCF) distributions\. You add rules to a [web ACL](#webacl), and then specify whether you want to allow or block web requests based on each rule\.
 
 ### S<a name="S"></a>
 
@@ -1916,7 +1916,7 @@ A defined duration of time, such as one minute, over which [Amazon CloudWatch](#
 
 **sandbox**<a name="sandbox"></a>  
 A testing location where you can test the functionality of your application without affecting production, incurring charges, or purchasing products\.  
-Amazon SES: An environment that is designed for developers to test and evaluate the service\. In the sandbox, you have full access to the Amazon SES API, but you can only send messages to verified email addresses and the mailbox simulator\. To get out of the sandbox, you need to apply for production access\. Accounts in the sandbox also have lower [sending limits](#sendinglimits) than production accounts\.
+[Amazon SES](#SES): An environment that is designed for developers to test and evaluate the service\. In the sandbox, you have full access to the Amazon SES API, but you can only send messages to verified email addresses and the mailbox simulator\. To get out of the sandbox, you need to apply for production access\. Accounts in the sandbox also have lower [sending limits](#sendinglimits) than production accounts\.
 
 **scale in**<a name="scale-in"></a>  
 To remove EC2 instances from an [Auto Scaling group](#AutoScalingGroup)\.
@@ -1975,7 +1975,7 @@ See [service control policy](#service-control-policy).
 A key that is used in conjunction with the [access key ID](#accesskeyID) to cryptographically sign programmatic AWS requests\. Signing a request identifies the sender and prevents the request from being altered\. You can generate secret access keys for your AWS [account](#account), individual IAM [user](#AWSUser)s, and temporary sessions\.
 
 **security group**<a name="SecurityGroup"></a>  
-A named set of allowed inbound network connections for an instance\. \(Security groups in Amazon VPC also include support for outbound connections\.\) Each security group consists of a list of protocols, ports, and IP address ranges\. A security group can apply to multiple instances, and multiple groups can regulate a single instance\. 
+A named set of allowed inbound network connections for an instance\. \(Security groups in [Amazon VPC](#AmazonVirtualPrivateCloud) also include support for outbound connections\.\) Each security group consists of a list of protocols, ports, and IP address ranges\. A security group can apply to multiple instances, and multiple groups can regulate a single instance\. 
 
 **sender**<a name="sender"></a>  
 The person or entity sending an email message\.
@@ -1984,13 +1984,13 @@ The person or entity sending an email message\.
 A Microsoft\-controlled version of [SPF](#SPF)\. An email authentication and anti\-spoofing system\. For more information about Sender ID, see [Sender ID](http://wikipedia.org/wiki/Sender_ID) in Wikipedia\.
 
 **sending limits**<a name="sendinglimits"></a>  
-The [sending quota](#sendingquota) and [maximum send rate](#maximumsendrate) that are associated with every Amazon SES account\.
+The [sending quota](#sendingquota) and [maximum send rate](#maximumsendrate) that are associated with every [Amazon SES](#SES) account\.
 
 **sending quota**<a name="sendingquota"></a>  
-The maximum number of email messages that you can send using Amazon SES in a 24\-hour period\.
+The maximum number of email messages that you can send using [Amazon SES](#SES) in a 24\-hour period\.
 
 **server\-side encryption \(SSE\)**<a name="server_side_encryption"></a>  
-The encrypting of data at the server level\. Amazon S3 supports three modes of server\-side encryption: SSE\-S3, in which Amazon S3 manages the keys; SSE\-C, in which the customer manages the keys; and SSE\-KMS, in which [AWS Key Management Service \(AWS KMS\)](#AWS_KMS) manages keys\.
+The [encrypting](#encrypt) of data at the server level\. [Amazon S3](#AmazonSimpleStorageService) supports three modes of server\-side encryption: SSE\-S3, in which Amazon S3 manages the keys; SSE\-C, in which the customer manages the keys; and SSE\-KMS, in which [AWS Key Management Service \(AWS KMS\)](#AWS_KMS) manages keys\.
 
 **service**   
 See [Amazon ECS service](#ecs_service).
@@ -2005,7 +2005,7 @@ See [endpoint](#endpoint).
 A web page showing up\-to\-the\-minute information about AWS service availability\. The dashboard is located at [http://status\.aws\.amazon\.com/](http://status.aws.amazon.com/)\.
 
 **service role**<a name="servicerole"></a>  
-An IAM [role](#role) that grants permissions to an AWS service so it can access AWS [resource](#resource)s\. The policies that you attach to the service role determine which AWS resources the service can access and what it can do with those resources\.
+An [IAM](#IAM) [role](#role) that grants permissions to an AWS service so it can access AWS [resource](#resource)s\. The policies that you attach to the service role determine which AWS resources the service can access and what it can do with those resources\.
 
 **SES**   
 See [Amazon Simple Email Service \(Amazon SES\)](#SES).
@@ -2023,7 +2023,7 @@ Secure Hash Algorithm\. SHA1 is an earlier version of the algorithm, which AWS h
 An [Amazon Machine Image \(AMI\)](#AmazonMachineImage) that a developer builds and makes available for others to use\. 
 
 **shutdown action**<a name="shutdownaction"></a>  
-Amazon EMR: A predefined bootstrap action that launches a script that executes a series of commands in parallel before terminating the job flow\. 
+[Amazon EMR](#AmazonElasticMapReduce): A predefined bootstrap action that launches a script that executes a series of commands in parallel before terminating the job flow\. 
 
 **signature**<a name="signature"></a>  
 Refers to a *digital signature*, which is a mathematical way to confirm the authenticity of a digital message\. AWS uses signatures to authenticate the requests you send to our web services\. For more information, to [https://aws\.amazon\.com/security](https://aws.amazon.com/security/)\. 
@@ -2054,7 +2054,7 @@ A search for a phrase that specifies how close the terms must be to one another 
 Simple Mail Transfer Protocol\. The standard that is used to exchange email messages between internet hosts for the purpose of routing and delivery\.
 
 **snapshot**<a name="snapshot"></a>  
-[Amazon Elastic Block Store \(Amazon EBS\)](#EBS): A backup of your [volume](#volume)s that is stored in Amazon S3\. You can use these snapshots as the starting point for new Amazon EBS volumes or to protect your data for long\-term durability\.   
+[Amazon Elastic Block Store \(Amazon EBS\)](#EBS): A backup of your [volume](#volume)s that is stored in [Amazon S3](#AmazonSimpleStorageService)\. You can use these snapshots as the starting point for new Amazon EBS volumes or to protect your data for long\-term durability\.   
 See also .
 
 **SNS**   
@@ -2097,13 +2097,13 @@ Sender Policy Framework\. A standard for authenticating email\.
 See also [http://www\.openspf\.org](http://www.openspf.org).
 
 **Spot Instance**<a name="SpotInstance"></a>  
- A type of [EC2 instance](#ec2instance) that you can bid on to take advantage of unused Amazon EC2 capacity\.
+ A type of [EC2 instance](#ec2instance) that you can bid on to take advantage of unused [Amazon EC2](#ec2) capacity\.
 
 **Spot price**<a name="SpotPrice"></a>  
-The price for a [Spot Instance](#SpotInstance) at any given time\. If your maximum price exceeds the current price and your restrictions are met, Amazon EC2 launches instances on your behalf\. 
+The price for a [Spot Instance](#SpotInstance) at any given time\. If your maximum price exceeds the current price and your restrictions are met, [Amazon EC2](#ec2) launches instances on your behalf\. 
 
 **SQL injection match condition**<a name="SQLinjectionmatchcondition"></a>  
-[AWS WAF](#awswaf): An attribute that specifies the part of web requests, such as a header or a query string, that AWS WAF inspects for malicious SQL code\. Based on the specified conditions, you can configure AWS WAF to allow or block web requests to AWS [resource](#resource)s such as Amazon CloudFront distributions\. 
+[AWS WAF](#awswaf): An attribute that specifies the part of web requests, such as a header or a query string, that AWS WAF inspects for malicious SQL code\. Based on the specified conditions, you can configure AWS WAF to allow or block web requests to AWS [resource](#resource)s such as [Amazon CloudFront](#AmazonCF) distributions\. 
 
 **SQS**   
 See [Amazon Simple Queue Service \(Amazon SQS\)](#AmazonSimpleQueueService).
@@ -2135,10 +2135,10 @@ The common root or substring shared by a set of related words\.
 The process of mapping related words to a common stem\. This enables matching on variants of a word\. For example, a search for "horse" could return matches for horses, horseback, and horsing, as well as horse\. [Amazon CloudSearch](#cloudSearch) supports both dictionary based and algorithmic stemming\.
 
 **step**<a name="step"></a>  
-Amazon EMR: A single function applied to the data in a [job flow](#jobflow)\. The sum of all steps comprises a job flow\.
+[Amazon EMR](#AmazonElasticMapReduce): A single function applied to the data in a [job flow](#jobflow)\. The sum of all steps comprises a job flow\.
 
 **step type**<a name="steptype"></a>  
-Amazon EMR: The type of work done in a step\. There are a limited number of step types, such as moving data from Amazon S3 to Amazon EC2 or from Amazon EC2 to Amazon S3\. 
+[Amazon EMR](#AmazonElasticMapReduce): The type of work done in a step\. There are a limited number of step types, such as moving data from [Amazon S3](#AmazonSimpleStorageService) to [Amazon EC2](#ec2) or from Amazon EC2 to Amazon S3\. 
 
 **sticky session**<a name="stickysession"></a>  
 A feature of the [Elastic Load Balancing](#ELB) load balancer that binds a user's session to a specific application instance so that all requests coming from the user during the session are sent to the same application instance\. By contrast, a load balancer defaults to route each request independently to the application instance with the smallest load\. 
@@ -2163,7 +2163,7 @@ See [Amazon Kinesis Data Streams](#AmazonKinesisStreams).
 Before you calculate an [HMAC](#HMAC) signature, you first assemble the required components in a canonical order\. The preencrypted string is the string\-to\-sign\.
 
 **string match condition**<a name="stringmatchcondition"></a>  
-[AWS WAF](#awswaf): An attribute that specifies the strings that AWS WAF searches for in a web request, such as a value in a header or a query string\. Based on the specified strings, you can configure AWS WAF to allow or block web requests to AWS [resource](#resource)s such as CloudFront distributions\.
+[AWS WAF](#awswaf): An attribute that specifies the strings that AWS WAF searches for in a web request, such as a value in a header or a query string\. Based on the specified strings, you can configure AWS WAF to allow or block web requests to AWS [resource](#resource)s such as [CloudFront](#AmazonCF) distributions\.
 
 **strongly consistent read**<a name="strongly-consistent-read"></a>  
 A read process that returns a response with the most up\-to\-date data, reflecting the updates from all prior write operations that were successful—regardless of the region\.   
@@ -2196,7 +2196,7 @@ An [Amazon Machine Image \(AMI\)](#AmazonMachineImage) similar to a [paid AMI](#
 See [Amazon Simple Workflow Service \(Amazon SWF\)](#swf).
 
 **symmetric encryption**<a name="symmetric_encryption"></a>  
-Encryption that uses a private key only\.   
+[Encryption](#encrypt) that uses a private key only\.   
 See also .
 
 **synchronous bounce**<a name="synchronousbounce"></a>  
@@ -2217,7 +2217,7 @@ Metadata that you can define and assign to AWS [resource](#resource)s, such as a
 
 **tagging**<a name="tagging"></a>  
 Tagging resources: Applying a [tag](#tag) to an AWS [resource](#resource)\.  
-Amazon SES: Also called *labeling*\. A way to format [return path](#returnpath) email addresses so that you can specify a different return path for each recipient of a message\. Tagging enables you to support [VERP](#VERP)\. For example, if Andrew manages a mailing list, he can use the return paths andrew\+recipient1@example\.net and andrew\+recipient2@example\.net so that he can determine which email bounced\.
+[Amazon SES](#SES): Also called *labeling*\. A way to format [return path](#returnpath) email addresses so that you can specify a different return path for each recipient of a message\. Tagging enables you to support [VERP](#VERP)\. For example, if Andrew manages a mailing list, he can use the return paths andrew\+recipient1@example\.net and andrew\+recipient2@example\.net so that he can determine which email bounced\.
 
 **target attribute**<a name="target-attribute"></a>  
 Amazon Machine Learning \(Amazon ML \): The attribute in the input data that contains the “correct” answers\. Amazon ML uses the target attribute to learn how to make predictions on new data\. For example, if you were building a model for predicting the sale price of a house, the target attribute would be “target sale price in USD\.”
@@ -2245,10 +2245,10 @@ The version of an [AWS CloudFormation](#CloudFormation) template design that det
 The process of confirming the use of [JSON](#json) code in an [AWS CloudFormation](#CloudFormation) template\. You can validate any AWS CloudFormation template using the `cfn-validate-template` command\.
 
 **temporary security credentials**<a name="temp_security_creds"></a>  
-Authentication information that is provided by AWS STS when you call an STS API action\. Includes an [access key ID](#accesskeyID), a [secret access key](#SecretAccessKey), a [session](#session) token, and an expiration time\.
+Authentication information that is provided by [AWS STS](#STS) when you call an STS API action\. Includes an [access key ID](#accesskeyID), a [secret access key](#SecretAccessKey), a [session](#session) token, and an expiration time\.
 
 **throttling**<a name="throttling"></a>  
-The automatic restricting or slowing down of a process based on one or more limits\. Examples: [Amazon Kinesis Data Streams](#AmazonKinesisStreams) throttles operations if an application \(or group of applications operating on the same stream\) attempts to get data from a shard at a rate faster than the shard limit\. [Amazon API Gateway](#APIGateway) uses throttling to limit the steady\-state request rates for a single account\. Amazon SES uses throttling to reject attempts to send email that exceeds the [sending limits](#sendinglimits)\.
+The automatic restricting or slowing down of a process based on one or more limits\. Examples: [Amazon Kinesis Data Streams](#AmazonKinesisStreams) throttles operations if an application \(or group of applications operating on the same stream\) attempts to get data from a shard at a rate faster than the shard limit\. [Amazon API Gateway](#APIGateway) uses throttling to limit the steady\-state request rates for a single account\. [Amazon SES](#SES) uses throttling to reject attempts to send email that exceeds the [sending limits](#sendinglimits)\.
 
 **time series data**<a name="timeseriesdata"></a>  
 Data provided as part of a metric\. The time value is assumed to be when the value occurred\. A metric is the fundamental concept for [Amazon CloudWatch](#AmazonCW) and represents a time\-ordered set of data points\. You publish metric data points into CloudWatch and later retrieve statistics about those data points as a time\-series ordered data set\.
@@ -2275,13 +2275,13 @@ A datasource that contains the data that Amazon Machine Learning uses to train t
 A cryptographic protocol that provides security for communication over the internet\. Its predecessor is Secure Sockets Layer \(SSL\)\.
 
 **trust policy**<a name="trust_policy"></a>  
-An IAM [policy](#policy) that is an inherent part of an IAM [role](#role)\. The trust policy specifies which [principal](#principal)s are allowed to use the role\.
+An [IAM](#IAM) [policy](#policy) that is an inherent part of an IAM [role](#role)\. The trust policy specifies which [principal](#principal)s are allowed to use the role\.
 
 **trusted signers**<a name="trustedsigners"></a>  
-AWS [account](#account)s that the CloudFront distribution owner has given permission to create signed URLs for a distribution's content\.
+AWS [account](#account)s that the [CloudFront](#AmazonCF) distribution owner has given permission to create signed URLs for a distribution's content\.
 
 **tuning**<a name="tuning"></a>  
-Selecting the number and type of AMIs to run a [Hadoop](#Hadoop) job flow most efficiently\.
+Selecting the number and type of [AMIs](#AmazonMachineImage) to run a [Hadoop](#Hadoop) job flow most efficiently\.
 
 **tunnel**<a name="tunnel"></a>  
 A route for transmission of private network traffic that uses the internet to connect nodes in the private network\. The tunnel uses encryption and secure protocols such as PPTP to prevent the traffic from being intercepted as it passes through public routing nodes\. 
@@ -2315,7 +2315,7 @@ A person or application under an [account](#account) that needs to make API call
 See [template validation](#template-validation).
 
 **value**<a name="value"></a>  
-Instances of attributes for an item, such as cells in a spreadsheet\. An attribute might have multiple values\.
+Instances of [attributes](#attribute) for an item, such as cells in a spreadsheet\. An attribute might have multiple values\.
 Tagging resources: A specific [tag](#tag) label that acts as a descriptor within a tag category \(key\)\. For example, you might have [EC2 instance](#ec2instance) with the tag key of *Owner* and the tag value of *Jan*\. You can tag an AWS [resource](#resource) with up to 10 key–value pairs\. Not all AWS resources can be tagged\.
 
 **Variable Envelope Return Path**   
@@ -2328,7 +2328,7 @@ The process of confirming that you own an email address or a domain so that you 
 Variable Envelope Return Path\. A way in which email sending applications can match [bounce](#bounce)d email with the undeliverable address that caused the bounce by using a different [return path](#returnpath) for each recipient\. VERP is typically used for mailing lists\. With VERP, the recipient's email address is embedded in the address of the return path, which is where bounced email is returned\. This makes it possible to automate the processing of bounced email without having to open the bounce messages, which may vary in content\.
 
 **versioning**<a name="versioning"></a>  
-Every object in Amazon S3 has a key and a version ID\. Objects with the same key, but different version IDs can be stored in the same [bucket](#bucket)\. Versioning is enabled at the bucket layer using PUT Bucket versioning\. 
+Every object in [Amazon S3](#AmazonSimpleStorageService) has a key and a version ID\. Objects with the same key, but different version IDs can be stored in the same [bucket](#bucket)\. Versioning is enabled at the bucket layer using PUT Bucket versioning\. 
 
 **VGW**<a name="VGW"></a>   
 See [virtual private gateway](#VPNgateway).
@@ -2373,7 +2373,7 @@ See [AWS VPN CloudHub](#awsvpncloudhub).
 See [Amazon WorkSpaces Application Manager \(Amazon WAM\)](#wam).
 
 **web access control list**<a name="webacl"></a>  
-[AWS WAF](#awswaf): A set of rules that defines the conditions that AWS WAF searches for in web requests to AWS [resource](#resource)s such as Amazon CloudFront distributions\. A web access control list \(web ACL\) specifies whether to allow, block, or count the requests\.
+[AWS WAF](#awswaf): A set of rules that defines the conditions that AWS WAF searches for in web requests to AWS [resource](#resource)s such as [Amazon CloudFront](#AmazonCF) distributions\. A web access control list \(web ACL\) specifies whether to allow, block, or count the requests\.
 
 **Web Services Description Language**   
 See [WSDL](#WSDL).

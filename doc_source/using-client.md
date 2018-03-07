@@ -31,7 +31,7 @@ Because the computer workstation from which or to which you make the data transf
 
 ## Testing Your Data Transfer with the Snowball Client<a name="testing-client"></a>
 
-You can use the Snowball client to test your data transfer before it begins\. Testing is useful because it can help you identify the most efficient method of transferring your data\. The first 10 days that the Snowball is onsite at your facility are free, and you'll want to test your data transfer ahead of time to prevent fees starting on the eleventh day\.
+You can use the Snowball client to test your data transfer before it begins\. Testing is useful because it can help you identify the most efficient method of transferring your data\. The first 10 days that the Snowball is on\-site at your facility are free, and you'll want to test your data transfer ahead of time to prevent fees starting on the eleventh day\.
 
 You can download the Snowball client from the tools page at any time, even before you first log in to the AWS Snowball Management Console\. You can also use the Snowball client to test your data transfer job before you create the job, or any time thereafter\. You can test the Snowball client without having a manifest, an unlock code, or a Snowball\.
 
@@ -64,7 +64,7 @@ The longer the test command runs, the more accurate the test data you get back\.
 
 ## Authenticating the Snowball Client to Transfer Data<a name="setting-up-client"></a>
 
-Before you can transfer data with your downloaded and installed Snowball client, you must first run the `snowball start` command\. This command authenticates your access to the Snowball\. For you to run this command, the Snowball you use for your job must be onsite, plugged into power and network, and turned on\. In addition, the E Ink display on the Snowball's front must say **Ready**\.
+Before you can transfer data with your downloaded and installed Snowball client, you must first run the `snowball start` command\. This command authenticates your access to the Snowball\. For you to run this command, the Snowball you use for your job must be on\-site, plugged into power and network, and turned on\. In addition, the E Ink display on the Snowball's front must say **Ready**\.
 
 **To authenticate the Snowball client's access to a Snowball**
 

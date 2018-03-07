@@ -6,7 +6,9 @@ This guide is for the Snowball \(50 TB or 80 TB of storage space\)\. If you are 
 
 # Performance for AWS Snowball<a name="performance"></a>
 
-Following, you can find information about AWS Snowball performance\. Here, we discuss performance in general terms, because on\-premises environments each have a different way of doing things—different network technologies, different hardware, different operating systems, different procedures, and so on\. The following table outlines how your network's transfer rate impacts how long it takes to fill a Snowball with data\. Transferring smaller files without batching them into larger files reduces your transfer speed due to increased overhead\.
+Following, you can find information about AWS Snowball performance\. Here, we discuss performance in general terms, because on\-premises environments each have a different way of doing things—different network technologies, different hardware, different operating systems, different procedures, and so on\. 
+
+The following table outlines how your network's transfer rate impacts how long it takes to fill a Snowball with data\. Transferring smaller files without batching them into larger files reduces your transfer speed due to increased overhead\.
 
 
 | Rate \(MB/s\) | 42\-TB Transfer Time | 72\-TB Transfer Time | 
@@ -30,7 +32,7 @@ In general, you can improve the transfer speed from your data source to the Snow
 
 1. **Use the latest Mac or Linux Snowball client** – The latest Snowball clients for Mac and Linux both support the Advanced Encryption Standard New Instructions \(AES\-NI\) extension to the x86 instruction set architecture\. This extension offers improved speeds for encrypting or decrypting data during transfers between the Snowball and your Mac or Linux workstations\. For more information on AES\-NI, including supported hardware, see [AES instruction set](https://en.wikipedia.org/wiki/AES_instruction_set#Supporting_x86_CPUs) on Wikipedia\.
 
-1. **Batch small files together** – Each copy operation has some overhead because of encryption\. Therefore, performing many transfers on individual files has slower overall performance than transferring the same data in larger files\. You can significantly improve your transfer speed for small files by batching them in a single `snowball cp --batch` command\. During the import process into Amazon S3, these batched files are automatically extracted to their original state\. For more information, see [Options for the snowball cp Command](copy-command-reference.md)\.
+1. **Batch small files together** – Each copy operation has some overhead because of encryption\. Therefore, performing many transfers on individual files has slower overall performance than transferring the same data in larger files\. You can significantly improve your transfer speed for small files by batching them in a single `snowball cp` command\. Batching of small files is enabled by default\. During the import process into Amazon S3, these batched files are automatically extracted to their original state\. For more information, see [Options for the snowball cp Command](copy-command-reference.md)\.
 
 1. **Perform multiple copy operations at one time** – If your workstation is powerful enough, you can perform multiple `snowball cp` commands at one time\. You can do this by running each command from a separate terminal window, in separate instances of the Snowball client, all connected to the same Snowball\.
 
@@ -38,7 +40,7 @@ In general, you can improve the transfer speed from your data source to the Snow
 
 1. **Transfer directories, not files** – Because there is overhead for each `snowball cp` command, we don't recommend that you queue a large number of individual copy commands\. Queuing many commands has a significant negative impact on your transfer performance\.
 
-   For example, say you have a directory called C:\\\\MyFiles that only contains three files, file1\.txt, file2\.txt, and file3\.txt\. Suppose that you issue the following three commands\.
+   For example, say that you have a directory called C:\\\\MyFiles that only contains three files, file1\.txt, file2\.txt, and file3\.txt\. Suppose that you issue the following three commands\.
 
    ```
    snowball cp C:\\MyFiles\file1.txt s3://mybucket
@@ -54,9 +56,9 @@ In general, you can improve the transfer speed from your data source to the Snow
 
 1. **Don't perform other operations on files during transfer** – Renaming files during transfer, changing their metadata, or writing data to the files during a copy operation has a significant negative impact on transfer performance\. We recommend that your files remain in a static state while you transfer them\. 
 
-1. **Reducing local network use** – The Snowball communicates across your local network\. Thus, reducing or eliminating other local network traffic between the Snowball, the switch it's connected to, and the workstation that hosts your data source can result in a significant improvement of data transfer speeds\.
+1. **Reduce local network use** – Your Snowball communicates across your local network\. Because of this, reducing other local network traffic between the Snowball, the switch it's connected to, and the workstation that hosts your data source can improve data transfer speeds\.
 
-1. **Eliminating unnecessary hops** – If you set up your Snowball, your data source, and your workstation so that they're the only machines communicating across a single switch, it can result in a significant improvement of data transfer speeds\. 
+1. **Eliminate unnecessary hops** – We recommend that you set up your Snowball, your data source, and your workstation so that they're the only machines communicating across a single switch\. Doing so can result in a significant improvement of data transfer speeds\. 
 
 ### Experimenting to Get Better Performance<a name="perfex"></a>
 

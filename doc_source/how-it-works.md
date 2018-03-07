@@ -37,7 +37,7 @@ The listing operation is a function of Amazon S3\. You are billed for it as you 
 
 ## How It Works: Implementation<a name="how-it-works-implementation"></a>
 
-The following are overviews of how the Snowball is implemented for importing and exporting data\. Both overviews assume that you'll use the AWS Snowball Management Console to create your job and the Snowball client to locally transfer your data\. If you'd rather work programmatically, to create jobs you can use the job management API for Snowball\. For more information, see [AWS Snowball API Reference](http://docs.aws.amazon.com/snowball/latest/api-reference/api-reference.html)\. To transfer your data programmatically, you can use the Amazon S3 Adapter for Snowball\. For more information, see Transferring Data with the Amazon S3 API Adapter for Snowball\.
+The following are overviews of how the Snowball is implemented for importing and exporting data\. Both overviews assume that you'll use the AWS Snowball Management Console to create your job and the Snowball client to locally transfer your data\. If you'd rather work programmatically, to create jobs you can use the job management API for Snowball\. For more information, see [AWS Snowball API Reference](http://docs.aws.amazon.com/snowball/latest/api-reference/api-reference.html)\. To transfer your data programmatically, you can use the Amazon S3 Adapter for Snowball\. For more information, see [Transferring Data with the Amazon S3 API Adapter for Snowball](snowball-transfer-adapter.md)\.
 
 ### End\-to\-End Import Implementation<a name="import-implementation"></a>
 

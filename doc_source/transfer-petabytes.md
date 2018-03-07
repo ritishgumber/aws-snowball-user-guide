@@ -6,7 +6,7 @@ This guide is for the Snowball \(50 TB or 80 TB of storage space\)\. If you are 
 
 # How to Transfer Petabytes of Data Efficiently<a name="transfer-petabytes"></a>
 
-When transferring petabytes of data, we recommend that you plan and calibrate your data transfer between the Snowball you have onsite and your workstation according to the following guidelines\. Small delays or errors can significantly slow your transfers when you work with large amounts of data\.
+When transferring petabytes of data, we recommend that you plan and calibrate your data transfer between the Snowball you have on\-site and your workstation according to the following guidelines\. Small delays or errors can significantly slow your transfers when you work with large amounts of data\.
 
 
 + [Planning Your Large Transfer](#copy-general-planning)
@@ -80,7 +80,7 @@ When you've finished planning your petabyte\-scale data transfer, we recommend t
 
 ## Calibrating a Large Transfer<a name="calibrating-large-transfer"></a>
 
-You can calibrate a large transfer by running the `snowball cp` command with a representative set of your data transfer segments\. In other words, choose a number of the data segments that you defined following last section's guidelines and transfer them to a Snowball, while making a record of the transfer speed and total transfer time for each operation\.
+You can calibrate a large transfer by running the `snowball cp` command with a representative set of your data transfer segments\. In other words, choose a number of the data segments that you defined following last section's guidelines and transfer them to a Snowball\. At the same time, make a record of the transfer speed and total transfer time for each operation\.
 
 **Note**  
 You can also use the `snowball test` command to perform calibration before receiving a Snowball\. For more information about using that command, see [Testing Your Data Transfer with the Snowball Client](using-client.md#testing-client)\.

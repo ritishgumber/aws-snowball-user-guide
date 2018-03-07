@@ -40,6 +40,6 @@ Following are approaches that we recommend for working with Snowball and your da
 
 + The **Job created** status is the only status in which you can cancel a job\. When a job changes to a different status, it can’t be canceled\.
 
-+ For import jobs, don't delete your local copies of the transferred data until the import into Amazon Simple Storage Service \(Amazon S3\) is successful and you can verify the results of the data transfer\.
++ For import jobs, don't delete your local copies of the transferred data until the import into Amazon S3 is successful at the end of the process\. As part of your process, be sure to verify the results of the data transfer\.
 
 + We recommend that you have no more than 500,000 files or directories within each directory\.
