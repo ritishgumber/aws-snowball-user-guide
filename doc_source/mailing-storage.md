@@ -21,9 +21,9 @@ When you create a job, you provide the address that you want the Snowball shippe
 
 + For all other regions, [UPS](https://www.ups.com/) is the carrier\.
 
-### AWS Snowball Pickups in the EU, US, Canada, Singapore, and Malaysia<a name="standard-pickup"></a>
+### AWS Snowball Pickups in the EU, US, Canada, and Singapore<a name="standard-pickup"></a>
 
-In the EU, US, Canada, Singapore, and Malaysia, keep the following information in mind for UPS to pick up a Snowball:
+In the EU, US, Canada, and Singapore, keep the following information in mind for UPS to pick up a Snowball:
 
 + You arrange for UPS to pick up the Snowball by scheduling a pickup with UPS directly, or take the Snowball to a UPS package drop\-off facility to be shipped to AWS\. To schedule a pickup with UPS, you need a UPS account\.
 
@@ -133,5 +133,3 @@ Each country has different shipping speeds available\. These shipping speeds are
 + **United States of America \(US\) and Canada** – When shipping within the US or Canada, you have access to one\-day shipping and two\-day shipping\.
 
 + **Singapore** – When shipping within Singapore, you have access to Domestic Express Saver shipping\.
-
-+ **Malaysia** – When shipping from Malaysia to Singapore, you have access to UPS Express Saver shipping\.

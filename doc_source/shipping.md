@@ -50,7 +50,7 @@ Before you create a job, you should sign in to the console from the AWS Region t
 
 + For data transfers in the EU regions, we only ship Snowballs to EU member countries listed following: Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, and the UK\.
 
-+ For data transfers in the Asia Pacific \(Singapore\) region, we only ship Snowballs to Singapore and Malaysia\.
++ For data transfers in the Asia Pacific \(Singapore\) region, we only ship Snowballs to Singapore\.
 
 **Note**  
 AWS doesn't ship Snowballs to post office boxes\.

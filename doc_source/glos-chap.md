@@ -352,7 +352,7 @@ See also [https://aws\.amazon\.com//autoscaling](https://aws.amazon.com//autosca
 A representation of multiple [EC2 instance](#ec2instance)s that share similar characteristics, and that are treated as a logical grouping for the purposes of instance scaling and management\.
 
 **Availability Zone**<a name="AZ"></a>  
-A distinct location within a [region](#region) that is insulated from failures in other Availability Zones, and provides inexpensive, low\-latency network connectivity to other Availability Zones in the same region\.
+A distinct location within a [Region](#region) that is insulated from failures in other Availability Zones, and provides inexpensive, low\-latency network connectivity to other Availability Zones in the same Region\.
 
 **AWS**   
 See [Amazon Web Services \(AWS\)](#amazonwebservices).
@@ -360,6 +360,10 @@ See [Amazon Web Services \(AWS\)](#amazonwebservices).
 **AWS Application Discovery Service**<a name="ApplicationDiscoveryService"></a>  
 A web service that helps you plan to migrate to AWS by identifying IT assets in a data center—including servers, virtual machines, applications, application dependencies, and network infrastructure\.    
 See also [https://aws\.amazon\.com/about\-aws/whats\-new/2016/04/aws\-application\-discovery\-service/](https://aws.amazon.com/about-aws/whats-new/2016/04/aws-application-discovery-service/).
+
+**AWS AppSync**<a name="AWSAppSync"></a>  
+An enterprise level, fully managed GraphQL service with real\-time data synchronization and offline programming features\.   
+See also [https://aws\.amazon\.com/appsync/](https://aws.amazon.com/appsync/).
 
 **AWS Billing and Cost Management**<a name="billing"></a>  
 The AWS cloud computing model in which you pay for services on demand and use as much or as little at any given time as you need\. While [resource](#resource)s are active under your account, you pay for the cost of allocating those resources and for any incidental usage associated with those resources, such as data transfer or allocated storage\.   
@@ -668,7 +672,7 @@ A commonly used term for creating an [Amazon Machine Image \(AMI\)](#AmazonMachi
 A logical cache distributed over multiple [cache node](#CacheNode)s\. A cache cluster can be set up with a specific number of cache nodes\.
 
 **cache cluster identifier**<a name="CacheClusterIdentifier"></a>  
-Customer\-supplied identifier for the cache cluster that must be unique for that customer in an AWS [region](#region)\.
+Customer\-supplied identifier for the cache cluster that must be unique for that customer in an AWS [Region](#region)\.
 
 **cache engine version**<a name="CacheEngineVersion"></a>  
 The version of the Memcached service that is running on the cache node\.
@@ -828,8 +832,8 @@ Also called *access credentials* or *security credentials*\. In authentication a
 **cross\-account access**<a name="crossaccountaccess"></a>  
 The process of permitting limited, controlled use of [resource](#resource)s in one AWS [account](#account) by a user in another AWS account\. For example, in [AWS CodeCommit](#AWSCodeCommit) and [AWS CodeDeploy](#AWSCodeDeploy) you can configure cross\-account access so that a user in AWS account A can access an AWS CodeCommit repository created by account B\. Or a pipeline in [AWS CodePipeline](#AWSCodePipeline) created by account A can use AWS CodeDeploy resources created by account B\. In [IAM](#IAM) you use a [role](#role) to [delegate](#delegation) temporary access to a [user](#AWSUser) in one account to resources in another\.
 
-**cross\-region replication**<a name="cross-region-replication"></a>  
-A client\-side solution for maintaining identical copies of [Amazon DynamoDB](#dynamodb) tables across different AWS [region](#region)s, in near real time\.
+**cross\-Region replication**<a name="cross-region-replication"></a>  
+A client\-side solution for maintaining identical copies of [Amazon DynamoDB](#dynamodb) tables across different AWS [Region](#region)s, in near real time\.
 
 **customer gateway**<a name="customergateway"></a>  
 A router or software application on your side of a VPN tunnel that is managed by [Amazon VPC](#AmazonVirtualPrivateCloud)\. The internal interfaces of the customer gateway are attached to one or more devices in your home network\. The external interface is attached to the [virtual private gateway](#VPNgateway) across the VPN tunnel\. 
@@ -848,7 +852,7 @@ The fundamental [resource](#resource) that [AWS Key Management Service \(AWS KMS
 See [service health dashboard](#servicehealthdashboard).
 
 **data consistency**<a name="data-consistency"></a>  
-A concept that describes when data is written or updated successfully and all copies of the data are updated in all AWS [region](#region)s\. However, it takes time for the data to propagate to all storage locations\. To support varied application requirements, [Amazon DynamoDB](#dynamodb) supports both eventually consistent and strongly consistent reads\.   
+A concept that describes when data is written or updated successfully and all copies of the data are updated in all AWS [Region](#region)s\. However, it takes time for the data to propagate to all storage locations\. To support varied application requirements, [Amazon DynamoDB](#dynamodb) supports both eventually consistent and strongly consistent reads\.   
 See also . 
 See also . 
 See also .
@@ -882,7 +886,7 @@ Size of the database compute platform used to run the instance\.
 An isolated database environment running in the cloud\. A DB instance can contain multiple user\-created databases\.
 
 **DB instance identifier**<a name="DBInstanceidentifier"></a>  
-User\-supplied identifier for the DB instance\. The identifier must be unique for that user in an AWS [region](#region)\.
+User\-supplied identifier for the DB instance\. The identifier must be unique for that user in an AWS [Region](#region)\.
 
 **DB parameter group**<a name="DBParameterGroup"></a>  
 A container for database engine parameter values that apply to one or more [DB instance](#dbinstance)s\.
@@ -1044,7 +1048,7 @@ To use a mathematical algorithm to make data unintelligible to unauthorized [use
 A set of key–value pairs that contains additional information associated with [AWS Key Management Service \(AWS KMS\)](#AWS_KMS)–encrypted information\.
 
 **endpoint**<a name="endpoint"></a>  
-A URL that identifies a host and port as the entry point for a web service\. Every web service request contains an endpoint\. Most AWS products provide regional endpoints to enable faster connectivity\.  
+A URL that identifies a host and port as the entry point for a web service\. Every web service request contains an endpoint\. Most AWS products provide endpoints for a Region to enable faster connectivity\.  
 [Amazon ElastiCache](#elasticache): The DNS name of a [cache node](#CacheNode)\.  
 [Amazon RDS](#AmazonRelationalDatabaseService): The DNS name of a [DB instance](#dbinstance)\.  
 [AWS CloudFormation](#CloudFormation): The DNS name or IP address of the server that receives an HTTP request\.
@@ -1407,7 +1411,7 @@ See also .
 See also .
 
 **load balancer**<a name="loadbalancer"></a>  
-A DNS name combined with a set of ports, which together provide a destination for all requests intended for your application\. A load balancer can distribute traffic to multiple application instances across every [Availability Zone](#AZ) within a [region](#region)\. Load balancers can span multiple Availability Zones within an [Amazon EC2](#ec2) region, but they cannot span multiple regions\. 
+A DNS name combined with a set of ports, which together provide a destination for all requests intended for your application\. A load balancer can distribute traffic to multiple application instances across every [Availability Zone](#AZ) within a [Region](#region)\. Load balancers can span multiple Availability Zones within an AWS Region into which an [Amazon EC2](#ec2) instance was launched\. But load balancers cannot span multiple Regions\. 
 
 **local secondary index**<a name="local-secondary-index"></a>  
 An index that has the same partition key as the table, but a different sort key\. A local secondary index is local in the sense that every partition of a local secondary index is scoped to a table partition that has the same partition key value\.   
@@ -1806,8 +1810,8 @@ A fast, open source, in\-memory key\-value data structure store\. Redis comes wi
 **reference**<a name="prop_reference"></a>  
 A means of inserting a property from one AWS [resource](#resource) into another\. For example, you could insert an [Amazon EC2](#ec2) [security group](#SecurityGroup) property into an [Amazon RDS](#AmazonRelationalDatabaseService) resource\.
 
-**region**<a name="region"></a>  
-A named set of AWS [resource](#resource)s in the same geographical area\. A region comprises at least two [Availability Zone](#AZ)s\.
+**Region**<a name="region"></a>  
+A named set of AWS [resource](#resource)s in the same geographical area\. A Region comprises at least two [Availability Zone](#AZ)s\.
 
 **regression model**<a name="recipe"></a>  
 Amazon Machine Learning: Preformatted instructions for common data transformations that fine\-tune machine learning model performance\.
@@ -2032,7 +2036,7 @@ Refers to a *digital signature*, which is a mathematical way to confirm the auth
 [AWS Import/Export](#AWSImportExport): A file you copy to the root directory of your storage device\. The file contains a job ID, manifest file, and a signature\.
 
 **Signature Version 4**<a name="sig_v_4"></a>  
-Protocol for authenticating inbound API requests to AWS services in all AWS regions\.
+Protocol for authenticating inbound API requests to AWS services in all AWS Regions\.
 
 **Simple Mail Transfer Protocol**   
 See [SMTP](#smtp).
@@ -2395,4 +2399,4 @@ A contraction of yotta binary byte, a yobibyte is 2^80 or 1,208,925,819,614,629,
 A contraction of zetta binary byte, a zebibyte is 2^70 or 1,180,591,620,717,411,303,424 bytes\. A zettabyte \(ZB\) is 10^21 or 1,000,000,000,000,000,000,000 bytes\. 1,024 ZiB is a [yobibyte](#yobibyte)\.
 
 **zone awareness**<a name="zoneawareness"></a>  
-[Amazon Elasticsearch Service \(Amazon ES\)](#AmazonElasticsearchService): A configuration that distributes nodes in a cluster across two [Availability Zone](#AZ)s in the same region\. Zone awareness helps to prevent data loss and minimizes downtime in the event of node and data center failure\. If you enable zone awareness, you must have an even number of data instances in the instance count, and you also must use the Amazon Elasticsearch Service Configuration API to replicate your data for your Elasticsearch cluster\.
+[Amazon Elasticsearch Service \(Amazon ES\)](#AmazonElasticsearchService): A configuration that distributes nodes in a cluster across two [Availability Zone](#AZ)s in the same Region\. Zone awareness helps to prevent data loss and minimizes downtime in the event of node and data center failure\. If you enable zone awareness, you must have an even number of data instances in the instance count, and you also must use the Amazon Elasticsearch Service Configuration API to replicate your data for your Elasticsearch cluster\.

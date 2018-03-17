@@ -23,9 +23,9 @@ An *import job* is the transfer of 80 TB or less of your data \(located in an on
 
 Your data source for an import job should be on\-premises\. In other words, the storage devices that hold the data to be transferred should be physically located at the address that you provided when you created the job\.
 
-You can import any number of directories, files, and objects for each import job, provided the amount of data your importing fits within a single Snowball\. In the US regions, Snowballs come in two sizes: 50 TB and 80 TB\. All other regions have 80 TB Snowballs only\.
+You can import any number of directories, files, and objects for each import job, provided the amount of data you're importing fits within a single Snowball\. In the US regions, Snowballs come in two sizes: 50 TB and 80 TB\. All other regions have 80 TB Snowballs only\.
 
-When you import files, each file becomes an object in Amazon S3 and each directory becomes a prefix\. If you import data into an existing bucket, any existing objects with the same names as newly imported will be overwritten\.
+When you import files, each file becomes an object in Amazon S3 and each directory becomes a prefix\. If you import data into an existing bucket, any existing objects with the same names as newly imported objects will be overwritten\.
 
 When the import has been processed and verified, AWS performs a complete erasure of the Snowball\. This erasure follows the National Institute of Standards and Technology \(NIST\) 800\-88 standards\.
 
