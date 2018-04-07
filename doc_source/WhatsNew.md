@@ -4,7 +4,7 @@ This guide is for the Snowball \(50 TB or 80 TB of storage space\)\. If you are 
 
 --------
 
-# Document History<a name="WhatsNew"></a>
+# Document Histoory<a name="WhatsNew"></a>
 
  The following table describes the important changes to the documentation since the last release of AWS Snowball\. 
 
